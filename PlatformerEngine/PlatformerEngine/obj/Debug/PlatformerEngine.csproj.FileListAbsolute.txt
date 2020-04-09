@@ -1,0 +1,11 @@
+/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerEngine/obj/Debug/PlatformerEngine.csprojAssemblyReference.cache
+/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerEngine/bin/AnyCPU/Debug/PlatformerEngine.dll
+/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerEngine/bin/AnyCPU/Debug/PlatformerEngine.pdb
+/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerEngine/bin/AnyCPU/Debug/MonoGame.Framework.dll
+/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerEngine/bin/AnyCPU/Debug/Newtonsoft.Json.dll
+/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerEngine/bin/AnyCPU/Debug/Newtonsoft.Json.xml
+/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerEngine/bin/AnyCPU/Debug/MonoGame.Framework.xml
+/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerEngine/bin/AnyCPU/Debug/MonoGame.Framework.dll.config
+/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerEngine/obj/Debug/PlatformerEngine.csproj.CopyComplete
+/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerEngine/obj/Debug/PlatformerEngine.dll
+/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerEngine/obj/Debug/PlatformerEngine.pdb

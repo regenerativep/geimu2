@@ -66,7 +66,7 @@ namespace PlatformerTestGame
                     RoomMap[i, j] = GetRandomDungeonRoom();
                 }
             }
-            Engine.LoadRoom("Levels\\startingroom.json");
+            Engine.LoadRoom("Levels/startingroom.json");
             MaxTimerLength = 60 * 40;
             Timer = MaxTimerLength;
             BossAlreadySpawned = false;
@@ -74,7 +74,7 @@ namespace PlatformerTestGame
         }
         public Room GetRandomDungeonRoom()
         {
-            string filename = "Levels\\dungeon";
+            string filename = "Levels/dungeon";
             filename += PlatformerMath.Choose("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10") + ".json";
             return (new Room(Engine)).Load(filename);
         }
@@ -123,7 +123,7 @@ namespace PlatformerTestGame
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            Engine.Assets.LoadAssetsFromFile("Data\\assets.json");
+            Engine.Assets.LoadAssetsFromFile("Data/assets.json");
             Engine.CurrentRoom.LightEffect = Content.Load<Effect>("lighteffect"); //dont want to add another part to the asset manager just for this
         }
 

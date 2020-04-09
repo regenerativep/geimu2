@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sounds/swing.wav</SourceFile>
+  <SourceTime>2020-04-09T13:58:23.535291-04:00</SourceTime>
+  <DestFile>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/bin/DesktopGL/TestGameContent/sounds/swing.xnb</DestFile>
+  <DestTime>2020-04-09T14:12:02.0586443-04:00</DestTime>
+  <Importer>WavImporter</Importer>
+  <ImporterTime>2020-01-01T22:16:05.1742445-05:00</ImporterTime>
+  <Processor>SoundEffectProcessor</Processor>
+  <ProcessorTime>2020-01-01T22:16:05.1742445-05:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

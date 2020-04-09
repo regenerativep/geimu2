@@ -14,10 +14,10 @@
 #---------------------------------- Content ---------------------------------#
 
 #begin lighteffect.fx
-/importer:EffectImporter
-/processor:EffectProcessor
-/processorParam:DebugMode=Auto
-/build:lighteffect.fx
+/copy:lighteffect.fx
+
+#begin lighteffect.xnb
+/copy:lighteffect.xnb
 
 #begin mainFont.spritefont
 /importer:FontDescriptionImporter

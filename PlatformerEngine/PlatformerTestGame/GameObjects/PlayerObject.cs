@@ -86,7 +86,7 @@ namespace PlatformerTestGame.GameObjects
             BossObject bossObject = (BossObject)Room.FindObject("obj_boss");
             if (Room.GameObjectList.Contains(bossObject))
             {
-                Room.Engine.LoadRoom("Levels\\lose.json", new FadeTransition());
+                Room.Engine.LoadRoom("Levels/lose.json", new FadeTransition());
             }
             Room.LightList.Remove(Light);
             Room.GameObjectList.Remove(this);

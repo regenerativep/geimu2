@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/mainFont.spritefont</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/prepartion_main_theme.wav</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/preperation_boss_theme.wav</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sounds/airjump.wav</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sounds/groundjump.wav</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sounds/magic.wav</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sounds/magic2.wav</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sounds/swing.wav</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sounds/swing2.wav</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sounds/swing3.wav</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/blockplaceholder.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/boss_fly/boss_fly_0.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/boss_fly/boss_fly_1.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/boss_fly/boss_fly_2.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/boss_fly/boss_fly_3.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/circularLight.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/enemy_walk/enemy_walk_0.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/enemy_walk/enemy_walk_1.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/enemy_walk/enemy_walk_2.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/idle.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/magic_book.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/magicBall/magicBall_0.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/magicBall/magicBall_1.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/magicBall/magicBall_2.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/magicBall/magicBall_3.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/magicBall/magicBall_4.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/player_run/player_running_0.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/player_run/player_running_1.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/player_run/player_running_2.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/player_run/player_running_3.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/player_run/player_running_4.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/player_run/player_running_5.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/redBullet.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stoneBrick/stoneBrick_all.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stoneBrick/stoneBrick_background.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stoneBrick/stoneBrick_bottom.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stoneBrick/stoneBrick_bottomleft.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stoneBrick/stoneBrick_bottomright.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stoneBrick/stoneBrick_left.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stoneBrick/stoneBrick_leftright.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stoneBrick/stoneBrick_none.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stoneBrick/stoneBrick_right.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/sword.png</File>
+    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/sword_swipe.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File>mainTheme.wav</File>
+    <File>bossTheme.wav</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File>sprites/player_idle.png</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File>sprites/player_run/0.png</File>
+    <File>sprites/player_run/1.png</File>
+    <File>sprites/player_run/2.png</File>
+    <File>sprites/player_run/3.png</File>
+    <File>sprites/player_run/4.png</File>
+    <File>sprites/player_run/5.png</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

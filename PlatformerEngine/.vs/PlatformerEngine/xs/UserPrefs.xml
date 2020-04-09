@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{12BC9F85-4D69-432C-8BFA-9ED4458A2534}|Default">
+  <MonoDevelop.Ide.ItemProperties.PreperationGame PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PlatformerEngine/PEngine.cs">
+    <Files>
+      <File FileName="PlatformerEngine/AssetManager.cs" Line="1" Column="17" />
+      <File FileName="PlatformerTestGame/PreperationGame.csproj" Line="3" Column="43" />
+      <File FileName="PlatformerEngine/Room.cs" Line="280" Column="72" />
+      <File FileName="PlatformerTestGame/PlatformerGame.cs" Line="127" Column="50" />
+      <File FileName="PlatformerEngine/PEngine.cs" Line="34" Column="23" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="PlatformerEngine" expanded="True">
+            <Node name="PlatformerEngine" expanded="True" />
+            <Node name="PreperationGame" expanded="True" selected="True">
+              <Node name="References" expanded="True" />
+              <Node name="Content" expanded="True" />
+              <Node name="GameObjects" expanded="True" />
+              <Node name="Properties" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
