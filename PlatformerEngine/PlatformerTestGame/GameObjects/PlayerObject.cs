@@ -229,7 +229,7 @@ namespace PlatformerTestGame.GameObjects
             {
                 Item?.DoUse(this);
             }
-            PlatformerGame game = (PlatformerGame)Room.Engine.Game;
+            GeimuGame game = (GeimuGame)Room.Engine.Game;
             if (Position.X > Room.Width && Velocity.X > 0)
             {
                 Position.X -= Room.Width;

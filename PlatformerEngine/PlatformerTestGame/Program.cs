@@ -9,14 +9,14 @@ namespace PlatformerTestGame
     /// </summary>
     public static class Program
     {
-        public static PlatformerGame Game;
+        public static GeimuGame Game;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main()
         {
-            using (Game = new PlatformerGame())
+            using (Game = new GeimuGame())
             {
                 //Action endCb = ConsoleManager.Start();
                 Game.Run();

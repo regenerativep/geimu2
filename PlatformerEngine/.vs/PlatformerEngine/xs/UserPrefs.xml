@@ -1,29 +1,32 @@
 ﻿<Properties StartupConfiguration="{12BC9F85-4D69-432C-8BFA-9ED4458A2534}|Default">
-  <MonoDevelop.Ide.ItemProperties.PreperationGame PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="PlatformerEngine/PEngine.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PlatformerTestGame/Data/assets.json">
     <Files>
-      <File FileName="PlatformerEngine/AssetManager.cs" Line="1" Column="17" />
-      <File FileName="PlatformerTestGame/PreperationGame.csproj" Line="3" Column="43" />
+      <File FileName="PlatformerEngine/AssetManager.cs" Line="50" Column="10" />
       <File FileName="PlatformerEngine/Room.cs" Line="280" Column="72" />
-      <File FileName="PlatformerTestGame/PlatformerGame.cs" Line="127" Column="50" />
+      <File FileName="PlatformerTestGame/GeimuGame.cs" Line="7" Column="14" />
       <File FileName="PlatformerEngine/PEngine.cs" Line="34" Column="23" />
+      <File FileName="PlatformerTestGame/Data/assets.json" Line="339" Column="6" />
+      <File FileName="PlatformerEditor/types.json" Line="34" Column="4" />
+      <File FileName="PlatformerEngine/SpriteData.cs" Line="75" Column="40" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="PlatformerEngine" expanded="True">
-            <Node name="PlatformerEngine" expanded="True" />
-            <Node name="PreperationGame" expanded="True" selected="True">
-              <Node name="References" expanded="True" />
-              <Node name="Content" expanded="True" />
-              <Node name="GameObjects" expanded="True" />
-              <Node name="Properties" expanded="True" />
+            <Node name="GeimuGame" expanded="True">
+              <Node name="Content" expanded="True">
+                <Node name="TestGameContent.mgcb" selected="True" />
+              </Node>
+              <Node name="Data" expanded="True" />
             </Node>
+            <Node name="PlatformerEditor" expanded="True" />
+            <Node name="PlatformerEngine" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.GeimuGame PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -3,96 +3,47 @@
     {
       "name": "obj_block",
       "type": "texture",
-      "path": "sprites\\blockplaceholder"
+      "path": "sprites/blockplaceholder"
     },
     {
       "name": "tle_stonebrick_none",
       "type": "texture",
-      "path": "sprites\\stoneBrick\\stoneBrick_none"
+      "path": "sprites/stoneBrick/stoneBrick_none"
     },
     {
       "name": "tle_stonebrick_right",
       "type": "texture",
-      "path": "sprites\\stoneBrick\\stoneBrick_right"
+      "path": "sprites/stoneBrick/stoneBrick_right"
     },
     {
       "name": "tle_stonebrick_left",
       "type": "texture",
-      "path": "sprites\\stoneBrick\\stoneBrick_left"
+      "path": "sprites/stoneBrick/stoneBrick_left"
     },
     {
       "name": "tle_stonebrick_bottomright",
       "type": "texture",
-      "path": "sprites\\stoneBrick\\stoneBrick_bottomright"
+      "path": "sprites/stoneBrick/stoneBrick_bottomright"
     },
     {
       "name": "tle_stonebrick_bottomleft",
       "type": "texture",
-      "path": "sprites\\stoneBrick\\stoneBrick_bottomleft"
+      "path": "sprites/stoneBrick/stoneBrick_bottomleft"
     },
     {
       "name": "tle_stonebrick_bottom",
       "type": "texture",
-      "path": "sprites\\stoneBrick\\stoneBrick_bottom"
+      "path": "sprites/stoneBrick/stoneBrick_bottom"
     },
     {
       "name": "tle_stonebrick_bottomleftright",
       "type": "texture",
-      "path": "sprites\\stoneBrick\\stoneBrick_all"
+      "path": "sprites/stoneBrick/stoneBrick_all"
     },
     {
       "name": "tle_stonebrick_leftright",
       "type": "texture",
-      "path": "sprites\\stoneBrick\\stoneBrick_leftright"
-    },
-    {
-      "name": "itm_sword",
-      "type": "texture",
-      "path": "sprites\\sword"
-    },
-    {
-      "name": "obj_player_idle",
-      "type": "texture",
-      "path": "sprites\\player_idle"
-    },
-    {
-      "name": "obj_player_run",
-      "type": "framedTexture",
-      "path": "sprites\\player_run\\",
-      "frames": 6
-    },
-    {
-      "name": "itm_sword_swipe",
-      "type": "texture",
-      "path": "sprites\\sword_swipe"
-    },
-    {
-      "name": "itm_magic_ball",
-      "type": "framedTexture",
-      "path": "sprites\\magicBall\\magicBall_",
-      "frames": 5
-    },
-    {
-      "name": "itm_magic_book",
-      "type": "texture",
-      "path": "sprites\\magic_book"
-    },
-    {
-      "name": "obj_enemy_walk",
-      "type": "framedTexture",
-      "path": "sprites\\enemy_walk\\enemy_walk_",
-      "frames": 3
-    },
-    {
-      "name": "obj_boss_fly",
-      "type": "framedTexture",
-      "path": "sprites\\boss_fly\\boss_fly_",
-      "frames": 4
-    },
-    {
-      "name": "redBullet",
-      "type": "texture",
-      "path": "sprites\\redBullet"
+      "path": "sprites/stoneBrick/stoneBrick_leftright"
     },
     {
       "name": "fnt_main",
@@ -100,59 +51,291 @@
       "path": "mainFont"
     },
     {
-      "name": "msc_main",
-      "type": "sound",
-      "path": "mainTheme"
-    },
-    {
-      "name": "snd_jump_air",
-      "type": "sound",
-      "path": "sounds\\airjump"
-    },
-    {
-      "name": "snd_jump_ground",
-      "type": "sound",
-      "path": "sounds\\groundjump"
-    },
-    {
-      "name": "snd_magic_1",
-      "type": "sound",
-      "path": "sounds\\magic"
-    },
-    {
-      "name": "snd_magic_2",
-      "type": "sound",
-      "path": "sounds\\magic2"
-    },
-    {
-      "name": "snd_sword_1",
-      "type": "sound",
-      "path": "sounds\\swing"
-    },
-    {
-      "name": "snd_sword_2",
-      "type": "sound",
-      "path": "sounds\\swing2"
-    },
-    {
-      "name": "snd_sword_3",
-      "type": "sound",
-      "path": "sounds\\swing3"
-    },
-    {
       "name": "lgt_circular",
       "type": "texture",
-      "path": "sprites\\circularLight"
-    },
-    {
-      "name": "msc_boss",
-      "type": "sound",
-      "path": "bossTheme"
+      "path": "sprites/circularLight"
     },
     {
       "name": "bg_stoneBrick",
       "type": "texture",
-      "path": "sprites\\stoneBrick\\stoneBrick_background"
+      "path": "sprites/stoneBrick/stoneBrick_background"
+    },
+    {
+      "name": "snd_bossTheme",
+      "type": "sound",
+      "path": "sounds/bossTheme"
+    },
+    {
+      "name": "snd_airjump",
+      "type": "sound",
+      "path": "sounds/airjump"
+    },
+    {
+      "name": "snd_groundjump",
+      "type": "sound",
+      "path": "sounds/groundjump"
+    },
+    {
+      "name": "snd_hhuh",
+      "type": "sound",
+      "path": "sounds/Hhuh"
+    },
+    {
+      "name": "snd_hhuh2",
+      "type": "sound",
+      "path": "sounds/Hhuh - Copy"
+    },
+    {
+      "name": "snd_jumpreset",
+      "type": "sound",
+      "path": "sounds/JumpReset"
+    },
+    {
+      "name": "snd_reimuhurt",
+      "type": "sound",
+      "path": "sounds/reimudamaged"
+    },
+    {
+      "name": "snd_maintheme",
+      "type": "sound",
+      "path": "sounds/Theme"
+    },
+    {
+      "name": "spr_clownpiece",
+      "type": "framedTexture",
+      "path": "sprites/clownpiece/",
+      "frames": 3
+    },
+    {
+      "name": "spr_crosshair",
+      "type": "framedTexture",
+      "path": "sprites/crosshair/",
+      "frames": 3
+    },
+    {
+      "name": "spr_fairy",
+      "type": "framedTexture",
+      "path": "sprites/fairy/",
+      "frames": 4
+    },
+    {
+      "name": "spr_jumpparticle",
+      "type": "framedTexture",
+      "path": "sprites/jumpParticle/",
+      "frames": 3
+    },
+    {
+      "name": "spr_reimuidle",
+      "type": "framedTexture",
+      "path": "sprites/reimu/",
+      "frames": 3
+    },
+    {
+      "name": "spr_reimurun",
+      "type": "framedTexture",
+      "path": "sprites/reimuRun/",
+      "frames": 8
+    },
+    {
+      "name": "spr_yinyang",
+      "type": "framedTexture",
+      "path": "sprites/yinYang/",
+      "frames": 4
+    },
+    {
+      "name": "spr_dirtedgebottom",
+      "type": "texture",
+      "path": "sprites/2huDirtEdgeBottom"
+    },
+    {
+      "name": "spr_dirtedgeleft",
+      "type": "texture",
+      "path": "sprites/2huDirtEdgeLeft"
+    },
+    {
+      "name": "spr_dirtedgeright",
+      "type": "texture",
+      "path": "sprites/2huDirtEdgeRight"
+    },
+    {
+      "name": "spr_dirtedgetop",
+      "type": "texture",
+      "path": "sprites/2huDirtEdgeTop"
+    },
+    {
+      "name": "spr_grass",
+      "type": "texture",
+      "path": "sprites/2hugrass2"
+    },
+    {
+      "name": "spr_bullet",
+      "type": "texture",
+      "path": "sprites/bullet"
+    },
+    {
+      "name": "spr_dirt",
+      "type": "texture",
+      "path": "sprites/dirt"
+    },
+    {
+      "name": "spr_dirt2",
+      "type": "texture",
+      "path": "sprites/dirt2"
+    },
+    {
+      "name": "spr_paper",
+      "type": "texture",
+      "path": "sprites/GJpaper"
+    },
+    {
+      "name": "spr_stone",
+      "type": "texture",
+      "path": "sprites/GJstone1"
+    },
+    {
+      "name": "spr_textbox",
+      "type": "texture",
+      "path": "sprites/GJtextbox"
+    },
+    {
+      "name": "bg_hakureishrine0",
+      "type": "texture",
+      "path": "sprites/HakureiShrine"
+    },
+    {
+      "name": "bg_hakureishrine1",
+      "type": "texture",
+      "path": "sprites/HakureiShrine2"
+    },
+    {
+      "name": "bg_hakureishrine2",
+      "type": "texture",
+      "path": "sprites/HakureiShrine3"
+    },
+    {
+      "name": "bg_humanvillage0",
+      "type": "texture",
+      "path": "sprites/HumanVillage0"
+    },
+    {
+      "name": "bg_humanvillage1",
+      "type": "texture",
+      "path": "sprites/HumanVillage1"
+    },
+    {
+      "name": "bg_humanvillage2",
+      "type": "texture",
+      "path": "sprites/HumanVillage2"
+    },
+    {
+      "name": "bg_moriyashrine0",
+      "type": "texture",
+      "path": "sprites/MoriyaShrine1"
+    },
+    {
+      "name": "bg_moriyashrine1",
+      "type": "texture",
+      "path": "sprites/MoriyaShrine2"
+    },
+    {
+      "name": "bg_moriyashrine2",
+      "type": "texture",
+      "path": "sprites/MoriyaShrine3"
+    },
+    {
+      "name": "bg_moriyashrine3",
+      "type": "texture",
+      "path": "sprites/MoriyaShrine4"
+    },
+    {
+      "name": "bg_moriyashrine4",
+      "type": "texture",
+      "path": "sprites/MoriyaShrine5"
+    },
+    {
+      "name": "bg_myourentemple0",
+      "type": "texture",
+      "path": "sprites/myourentemple1"
+    },
+    {
+      "name": "bg_myourentemple1",
+      "type": "texture",
+      "path": "sprites/myourentemple2"
+    },
+    {
+      "name": "bg_myourentemple2",
+      "type": "texture",
+      "path": "sprites/myourentemple3"
+    },
+    {
+      "name": "bg_myourentemple3",
+      "type": "texture",
+      "path": "sprites/myourentemple4"
+    },
+    {
+      "name": "bg_myourentemple4",
+      "type": "texture",
+      "path": "sprites/myourentemple5"
+    },
+    {
+      "name": "bg_yokaimountain0",
+      "type": "texture",
+      "path": "sprites/YokaiMountain1"
+    },
+    {
+      "name": "bg_yokaimountain1",
+      "type": "texture",
+      "path": "sprites/YokaiMountain2"
+    },
+    {
+      "name": "bg_yokaimountain2",
+      "type": "texture",
+      "path": "sprites/YokaiMountain3"
+    },
+    {
+      "name": "bg_yokaimountain3",
+      "type": "texture",
+      "path": "sprites/YokaiMountain4"
+    },
+    {
+      "name": "bg_yokaimountain4",
+      "type": "texture",
+      "path": "sprites/YokaiMountain5"
+    },
+    {
+      "name": "spr_healthbar",
+      "type": "texture",
+      "path": "sprites/Healthbar"
+    },
+    {
+      "name": "spr_healthbar_frame",
+      "type": "texture",
+      "path": "sprites/HealthbarFrame"
+    },
+    {
+      "name": "spr_jumpreset",
+      "type": "texture",
+      "path": "sprites/jumpreset"
+    },
+    {
+      "name": "spr_life",
+      "type": "texture",
+      "path": "sprites/life"
+    },
+    {
+      "name": "spr_purpleball",
+      "type": "texture",
+      "path": "sprites/PurpleBall"
+    },
+    {
+      "name": "spr_rainboworb",
+      "type": "texture",
+      "path": "sprites/RainbowOrb"
+    },
+    {
+      "name": "spr_purpleball",
+      "type": "texture",
+      "path": "sprites/PurpleBall"
     }
   ]
 }
