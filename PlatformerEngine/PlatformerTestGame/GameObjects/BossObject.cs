@@ -66,7 +66,7 @@ namespace PlatformerTestGame.GameObjects
             PlayerObject playerObject = (PlayerObject)Room.FindObject("obj_player");
             if (Room.GameObjectList.Contains(playerObject))
             {
-                Room.Engine.LoadRoom("Levels\\win.json", new FadeTransition());
+                Room.Engine.LoadRoom("Levels/win.json", new FadeTransition());
             }
             Room.LightList.Remove(Light);
             Room.GameObjectList.Remove(this);

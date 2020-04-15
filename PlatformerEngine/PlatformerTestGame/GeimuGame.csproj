@@ -7,7 +7,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{12BC9F85-4D69-432C-8BFA-9ED4458A2534}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PlatformerTestGame</RootNamespace>
     <AssemblyName>PlatformerTestGame</AssemblyName>

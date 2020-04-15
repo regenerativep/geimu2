@@ -76,11 +76,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AssetManager.cs" />
+    <Compile Include="Background.cs" />
     <Compile Include="ConsoleManager.cs" />
     <Compile Include="IInputTrigger.cs" />
     <Compile Include="InputManager.cs" />
     <Compile Include="KeyInputTrigger.cs" />
     <Compile Include="Light.cs" />
+    <Compile Include="ParallaxBackground.cs" />
     <Compile Include="PExtensions.cs" />
     <Compile Include="GameTile.cs" />
     <Compile Include="LayerData.cs" />
@@ -98,6 +100,7 @@
     <Compile Include="SoundManager.cs" />
     <Compile Include="SpriteData.cs" />
     <Compile Include="ITransition.cs" />
+    <Compile Include="StaticBackground.cs" />
     <Compile Include="UserInterface\ButtonElement.cs" />
     <Compile Include="UserInterface\CheckboxElement.cs" />
     <Compile Include="UserInterface\GroupElement.cs" />

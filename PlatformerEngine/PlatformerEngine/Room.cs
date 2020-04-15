@@ -68,7 +68,7 @@ namespace PlatformerEngine
         /// <summary>
         /// background for the room
         /// </summary>
-        public SpriteData Background;
+        public Background Background;
         private ITransition currentTransition;
         /// <summary>
         /// creates an instance of a room
@@ -78,8 +78,7 @@ namespace PlatformerEngine
         {
             Engine = engine;
             Sounds = new SoundManager();
-            Background = new SpriteData();
-            Background.LayerData = new LayerData(0);
+            Background = null;
             Width = 512;
             Height = 512;
             ViewPosition = new Vector2(0, 0);
@@ -134,7 +133,7 @@ namespace PlatformerEngine
             {
                 currentTransition.Draw(spriteBatch);
             }
-            Background.Draw(spriteBatch, new Vector2(0, 0));
+            Background?.Draw(spriteBatch);
             for (int i = 0; i < GameObjectList.Count; i++)
             {
                 GameObjectList[i].Draw(spriteBatch, ceiledOffset);
@@ -157,6 +156,7 @@ namespace PlatformerEngine
         }
         public void LoadAssets(AssetManager assets)
         {
+            Background?.Load(assets);
             for(int i = 0; i < GameObjectList.Count; i++)
             {
                 GameObjectList[i].Load(assets);
@@ -286,6 +286,31 @@ namespace PlatformerEngine
                 float gravityY = (float)physicsObj.GetValue("gravityy").ToObject(typeof(float));
                 Physics = new PhysicsSim();
                 Physics.Gravity = new Vector2(gravityX, gravityY);
+            }
+            //background
+            if(obj.ContainsKey("background"))
+            {
+                JObject backObj = (JObject)obj.GetValue("background").ToObject(typeof(JObject));
+                string backgroundType = (string)backObj.GetValue("type").ToObject(typeof(string));
+                if(backgroundType.Equals("static"))
+                {
+                    string backAssetName = (string)backObj.GetValue("name").ToObject(typeof(string));
+                    Background = new StaticBackground(backAssetName);
+                }
+                else if(backgroundType.Equals("parallax"))
+                {
+                    JArray backAssetNames = (JArray)backObj.GetValue("names").ToObject(typeof(JArray));
+                    string targetName = (string)backObj.GetValue("targetName").ToObject(typeof(string));
+                    string[] names = new string[backAssetNames.Count];
+                    float[] speeds = new float[backAssetNames.Count];
+                    for(int i = 0; i < backAssetNames.Count; i++)
+                    {
+                        JObject backLayer = (JObject)backAssetNames[i].ToObject(typeof(JObject));
+                        names[i] = (string)backLayer.GetValue("name").ToObject(typeof(string));
+                        speeds[i] = (float)backLayer.GetValue("speed").ToObject(typeof(float));
+                    }
+                    Background = new ParallaxBackground(this, names, speeds, targetName);
+                }
             }
             //world layers
             JArray layerArray = (JArray)obj.GetValue("layers").ToObject(typeof(JArray));
