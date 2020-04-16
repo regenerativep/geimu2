@@ -5,13 +5,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PlatformerEngine;
+using Microsoft.Xna.Framework.Audio;
 
-namespace Geimu.GameObjects
+namespace PlatformerTestGame.GameObjects
 {
-    public class FairyObject : GameObject
+    public class FairyObject : EnemyObject
     {
+        public SoundEffect ShootSound;
+        public Texture2D BulletSprite;
+        public static float Gravity = 0.6f;
+        public static float MaxHealth = 16;
         public static float MoveSpeed = .8f;
-        public static float HorizontalFriction = 1;
+        public static float AirFriction = 1;
         public static Vector2 MaxVelocity = new Vector2(4, 16);
         public static float IdleMaxSpeed = 3;
 
@@ -23,27 +29,37 @@ namespace Geimu.GameObjects
         private int cooldown;
         private int life;
 
-        public FairyObject(Room room, Vector2 pos) : base(room, pos, new Vector2(0, 0), new Vector2(32, 32))
+        public FairyObject(Room room, Vector2 pos) : base(room, pos)
         {
             life = 3;
             cooldown = 60;
             moving = true;
             Position -= new Vector2(0, 16);
             facingRight = true;
-            Sprite = new SpriteData();
-            Sprite.Size = new Vector2(32, 32);
             animationindex = -16;
             goingUp = true;
-            Hitbox = new Rectangle(0, 0, 32, 48);
-            Sprite.Layer = Layer;
             fairySprite = null;
-            AssetManager.RequestTexture("fairy", (frames) =>
+            IdleImage = null;
+            RunImage = null;
+        }
+        public override void Load(AssetManager assets)
+        {
+            assets.RequestFramedTexture("obj_enemy_walk", (frames) =>
             {
-                fairySprite = frames;
-                Sprite.Change(fairySprite);
-                Sprite.Speed = 1f / 10;
+                RunImage = frames;
+                IdleImage = frames[0];
+                Sprite.Size = new Vector2(32, 64);
+                Sprite.Offset = -(new Vector2(Sprite.Size.X / 2, Sprite.Size.Y / 2 + (Sprite.Size.Y - Sprite.Size.X) / 2));
+                Sprite.Speed = 0.2f;
             });
-
+            assets.RequestTexture("spr_rainboworb", (texture) =>
+            {
+                BulletSprite = texture;
+            });
+            assets.RequestSound("snd_jumpreset", (sound) =>
+            {
+                ShootSound = sound;
+            });
         }
 
         public override void Update()
@@ -59,7 +75,7 @@ namespace Geimu.GameObjects
             else
                 animationindex--;
             Vector2 vel = Velocity;
-            ReimuObject reimu = (ReimuObject)Room.FindObject("reimu");
+            PlayerObject reimu = (PlayerObject)Room.FindObject("reimu");
             if (moving)
             {
                 if (facingRight)
@@ -75,19 +91,29 @@ namespace Geimu.GameObjects
             }
             else
             {
-
-
-                Vector2 playerPos = reimu.Position + (reimu.Size / 2);
-                Vector2 fairyPos = Position + (Size / 2);
+                Rectangle hitbox = reimu.GetHitbox();
+                Vector2 size = new Vector2(hitbox.Width, hitbox.Height);
+                Vector2 playerPos = reimu.Position + (size / 2);
+                Vector2 fairyPos = Position + (size / 2);
                 /*Vector2 fairyOnScreenPos = fairyPos - Room.ViewOffset;
                 Vector2 playerRelativePos = playerPos - fairyOnScreenPos;*/
                 float dir = (float)Math.Atan2(playerPos.Y - Position.Y, playerPos.X - Position.X);
-                Room.GameObjectList.Add(new CompressedTouhouBall(Room, fairyPos, dir));
+
+                ProjectileObject proj = new ProjectileObject(Room, fairyPos, dir, 3, 1, "obj_player");
+                proj.TimeToLive = 1000;
+                proj.Sprite.Change(BulletSprite);
+                proj.Sprite.Angle = dir;
+                proj.Sprite.Size = new Vector2(16, 16);
+                proj.Sprite.Origin = proj.Sprite.Size / 2;
+                proj.Sprite.Offset = -(new Vector2(Sprite.Size.X / 2, Sprite.Size.Y / 2 + (Sprite.Size.Y - Sprite.Size.X) / 2));
+                Room.GameObjectList.Add(proj);
+                Room.Sounds.PlaySound(ShootSound);
+
                 moving = true;
                 cooldown = 60;
             }
             Velocity = vel;
-            if (Room.CheckCollision(AddVectorToRect(Hitbox, Position, new Vector2(1, 0))))
+            if (Room.FindCollision(PlatformerMath.AddVectorToRect(GetHitbox(), Position, new Vector2(1, 0))) != null)
             {
                 facingRight = false;
 

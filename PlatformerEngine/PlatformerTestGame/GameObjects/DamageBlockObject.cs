@@ -4,15 +4,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PlatformerEngine;
 
-namespace Geimu.GameObjects
+namespace PlatformerTestGame.GameObjects
 {
     class DamageBlockObject : GameObject
     {
-        public DamageBlockObject(Room room, Vector2 pos) : base(room, pos, new Vector2(0, 0), new Vector2(32,32))
+        public DamageBlockObject(Room room, Vector2 pos) : base(room, pos)
         {
 
         }
+
+        public const float DamageAmount = 10f;
 
         /*public void ChangeHitbox(Rectangle rect)
         {
@@ -21,10 +24,10 @@ namespace Geimu.GameObjects
 
         public override void Update()
         {
-            GameObject coll = Room.FindCollision(AddVectorToRect(Hitbox, Position), "reimu");
+            GameObject coll = Room.FindCollision(PlatformerMath.AddVectorToRect(GetHitbox(), Position), "obj_player");
             if (coll != null)
             {
-                ((ReimuObject)coll).Damage();
+                ((PlayerObject)coll).Damage(1);
             }
             base.Update();
         }

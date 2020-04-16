@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using PlatformerEngine;
 
-namespace Geimu.GameObjects
+namespace PlatformerTestGame.GameObjects
 {
     public class CrosshairObject : GameObject
     {

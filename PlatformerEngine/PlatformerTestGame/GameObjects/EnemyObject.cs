@@ -14,11 +14,7 @@ namespace PlatformerTestGame.GameObjects
 {
     public class EnemyObject : GameObject, IDamagable
     {
-        public static float Gravity = 0.6f;
-        public static Vector2 MaxVelocity = new Vector2(0.8f, 0.5f);
-        public static float GroundFriction = 0.4f;
-        public static float MaxHealth = 16;
-
+        public static float DefaultMaxHealth = 1;
         public Item Item;
         public InputManager Input;
         public KeyInputTrigger Left, Right, Jump;
@@ -39,7 +35,7 @@ namespace PlatformerTestGame.GameObjects
             AirSpeed = 0.1f;
             JumpSpeed = -14f;
             Grounded = false;
-            Health = MaxHealth;
+            Health = DefaultMaxHealth;
             Velocity = new Vector2(0, 0);
             MinDirectionChangeSpeed = 1f;
             MinRunAnimationSpeed = 2f;
@@ -63,18 +59,7 @@ namespace PlatformerTestGame.GameObjects
                 }
             }
         }
-        public override void Load(AssetManager assets)
-        {
-            assets.RequestFramedTexture("obj_enemy_walk", (frames) =>
-            {
-                RunImage = frames;
-                IdleImage = frames[0];
-            });
-          
-            Sprite.Size = new Vector2(32, 64);
-            Sprite.Offset = -(new Vector2(Sprite.Size.X / 2, Sprite.Size.Y / 2 + (Sprite.Size.Y - Sprite.Size.X) / 2));
-            Sprite.Speed = 0.2f;
-        }
+        
         public override void Update()
         {
             float moveSpeed = AirSpeed;
