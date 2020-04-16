@@ -113,20 +113,20 @@ namespace PlatformerTestGame.GameObjects
                 cooldown = 60;
             }
             Velocity = vel;
-            if (Room.FindCollision(PlatformerMath.AddVectorToRect(GetHitbox(), Position, new Vector2(1, 0))) != null)
+            if (Room.FindCollision(PlatformerMath.AddVectorToRect(GetHitbox(), Position, new Vector2(1, 0)), "obj_block") != null)
             {
                 facingRight = false;
 
             }
-            if (Room.CheckCollision(AddVectorToRect(Hitbox, Position, new Vector2(-1, 0))))
+            if (Room.FindCollision(PlatformerMath.AddVectorToRect(GetHitbox(), Position, new Vector2(-1, 0)), "obj_block") != null)
             {
                 facingRight = true;
             }
-            if (Room.CheckCollision(AddVectorToRect(Hitbox, Position, new Vector2(0, 1))) && !Room.CheckCollision(AddVectorToRect(Hitbox, Position, new Vector2(-1, 1))))
+            if (Room.FindCollision(PlatformerMath.AddVectorToRect(GetHitbox(), Position, new Vector2(0, 1)), "obj_block") != null && !(Room.FindCollision(PlatformerMath.AddVectorToRect(GetHitbox(), Position, new Vector2(-1, 1)),"obj_block")!=null))
             {
                 facingRight = true;
             }
-            if (Room.CheckCollision(AddVectorToRect(Hitbox, Position, new Vector2(0, 1))) && !Room.CheckCollision(AddVectorToRect(Hitbox, Position, new Vector2(1, 1))))
+            if (Room.FindCollision(PlatformerMath.AddVectorToRect(GetHitbox(), Position, new Vector2(0, 1)),"obj_block") != null && !(Room.FindCollision(PlatformerMath.AddVectorToRect(GetHitbox(), Position, new Vector2(1, 1)),"obj_block")!=null))
             {
                 facingRight = false;
             }
