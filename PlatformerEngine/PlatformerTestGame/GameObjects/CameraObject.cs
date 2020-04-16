@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
+using PlatformerEngine;
 
-namespace Geimu
+namespace PlatformerTestGame.GameObjects
 {
     public class CameraObject : GameObject
     {
@@ -22,10 +23,10 @@ namespace Geimu
         {
             if (Target == null) return;
             Vector2 pos = Position;
-            pos.X = ((TargetPreference * (Target.Position.X - (Target.Size.X / 2))) + (SelfPreference * pos.X)) / (TargetPreference + SelfPreference);
-            pos.Y = ((TargetPreference * (Target.Position.Y - (Target.Size.Y / 2))) + (SelfPreference * pos.Y)) / (TargetPreference + SelfPreference);
+            pos.X = ((TargetPreference * (Target.Position.X)) + (SelfPreference * pos.X)) / (TargetPreference + SelfPreference);
+            pos.Y = ((TargetPreference * (Target.Position.Y)) + (SelfPreference * pos.Y)) / (TargetPreference + SelfPreference);
             Position = pos;
-            Room.ViewOffset = (Target.Position * 2 - Position) - (new Vector2(Room.Game.GraphicsDevice.Viewport.Width, Room.Game.GraphicsDevice.Viewport.Height) / 2);
+            Room.ViewPosition = (Target.Position * 2 - Position) - (new Vector2(Room.Engine.Game.GraphicsDevice.Viewport.Width, Room.Engine.Game.GraphicsDevice.Viewport.Height) / 2);
         }
     }
 }
