@@ -45,9 +45,16 @@ namespace PlatformerTestGame
             PEngine.NameToType["obj_boss"] = typeof(BossObject);
             PEngine.NameToType["obj_win"] = typeof(GameWinObject);
             PEngine.NameToType["obj_lose"] = typeof(GameOverObject);
-            PEngine.NameToType["tle_stonebrick"] = typeof(StoneBrickTile);
+            PEngine.NameToType["obj_camera"] = typeof(CameraObject);
+            PEngine.NameToType["obj_crosshair"] = typeof(CrosshairObject);
+            PEngine.NameToType["obj_jumpparticle"] = typeof(JumpParticleObject);
+            PEngine.NameToType["obj_jumpreset"] = typeof(JumpResetObject);
+            PEngine.NameToType["obj_note"] = typeof(NoteObject);
+            PEngine.NameToType["obj_goalblock"] = typeof(GoalBlockObject);
+            PEngine.NameToType["obj_fairy"] = typeof(FairyObject);
+            PEngine.NameToType["obj_damageblock"] = typeof(DamageBlockObject);
 
-            
+
             base.Initialize();
         }
         /// <summary>

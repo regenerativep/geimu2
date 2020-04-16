@@ -331,11 +331,6 @@
       "name": "spr_rainboworb",
       "type": "texture",
       "path": "sprites/RainbowOrb"
-    },
-    {
-      "name": "spr_purpleball",
-      "type": "texture",
-      "path": "sprites/PurpleBall"
     }
   ]
 }
