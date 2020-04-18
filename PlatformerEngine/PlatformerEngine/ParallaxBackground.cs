@@ -34,11 +34,12 @@ namespace PlatformerEngine
                 assets.RequestTexture(name, (tex) =>
                 {
                     sprite.Change(tex);
-                    sprite.Offset = new Vector2((room.Engine.Game.GraphicsDevice.Viewport.Width - tex.Width)/ 2, (room.Engine.Game.GraphicsDevice.Viewport.Height - tex.Height) / 2);
+                    sprite.Size = new Vector2(room.Engine.Game.GraphicsDevice.Viewport.Width, room.Engine.Game.GraphicsDevice.Viewport.Height) * 1.1f;
+                    //sprite.Offset = sprite.Size / 2; //new Vector2((room.Engine.Game.GraphicsDevice.Viewport.Width - tex.Width) / 2, (room.Engine.Game.GraphicsDevice.Viewport.Height - tex.Height) / 2);
                 });
             }
         }
-        public void Draw(SpriteBatch spriteBatch)
+        public void Draw(SpriteBatch spriteBatch, Vector2 offset)
         {
             if (Images == null || Images.Length == 0) return;
             //find target
@@ -46,8 +47,7 @@ namespace PlatformerEngine
             //calculate positions and draw images
             for(int i = 0; i < Images.Length; i++)
             {
-                var image = Images[i];
-                image.Draw(spriteBatch, -(target.Position * Speeds[i])); //i hope this works
+                Images[i].Draw(spriteBatch, -(target.Position * Speeds[i])); //i hope this works
             }
         }
     }

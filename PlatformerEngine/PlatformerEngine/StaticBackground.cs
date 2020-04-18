@@ -12,8 +12,10 @@ namespace PlatformerEngine
     {
         public SpriteData Image;
         public string assetName;
-        public StaticBackground(string assetName)
+        public Room Room;
+        public StaticBackground(Room room, string assetName)
         {
+            Room = room;
             this.assetName = assetName;
             Image = new SpriteData();
         }
@@ -23,11 +25,12 @@ namespace PlatformerEngine
             {
                 Image.Change(tex);
                 Image.LayerData = new LayerData(2);
+                Image.Size = new Vector2(Room.Engine.Game.GraphicsDevice.Viewport.Width, Room.Engine.Game.GraphicsDevice.Viewport.Height);
             });
         }
-        public void Draw(SpriteBatch spriteBatch)
+        public void Draw(SpriteBatch spriteBatch, Vector2 offset)
         {
-            Image?.Draw(spriteBatch, new Vector2(0, 0));
+            Image?.Draw(spriteBatch, offset);
         }
     }
 }

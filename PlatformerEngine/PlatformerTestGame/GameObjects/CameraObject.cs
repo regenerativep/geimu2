@@ -15,7 +15,7 @@ namespace PlatformerTestGame.GameObjects
         public float SelfPreference { get; set; }
         public CameraObject(Room room, Vector2 pos) : base(room, pos)
         {
-            Target = null;
+            Target = Room.FindObject("obj_player");
             TargetPreference = 1;
             SelfPreference = 2;
         }

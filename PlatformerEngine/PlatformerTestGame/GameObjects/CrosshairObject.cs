@@ -13,13 +13,13 @@ namespace PlatformerTestGame.GameObjects
     public class CrosshairObject : GameObject
     {
         private MouseState mouseState;
-        public CrosshairObject(Room room) : base(room, new Vector2(0,0))
+        public CrosshairObject(Room room, Vector2 position) : base(room, position)
         {
             Sprite = new SpriteData();
             Sprite.Size = new Vector2(24, 24);
             Sprite.LayerData = new LayerData(1);
             Sprite.Speed = 0.1f;
-            Sprite.Offset = new Vector2(6, 6);
+            Sprite.Offset = -new Vector2(12, 12);
         }
 
         public override void Load(AssetManager assets)

@@ -106,7 +106,7 @@ namespace PlatformerEditor
             else if(mouseState.LeftPressed())
             {
                 Vector2 mousePos = new Vector2(mouseState.X, mouseState.Y) - offset - Position - SoftOffset;
-                if (actualGame.CurrentWorldLayer != null)
+                if (actualGame.CurrentWorldLayer != null && actualGame.CurrentWorldItemType != null)
                 {
                     WorldItem item = new WorldItem(UIManager, actualGame.CurrentWorldItemType, SnapPosition(mousePos), actualGame.CurrentWorldLayer.DrawLayer);
                     actualGame.CurrentWorldLayer.WorldItems.Add(item);

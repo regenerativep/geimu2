@@ -58,6 +58,10 @@ namespace PlatformerEngine
         /// </summary>
         public RenderTarget2D LightTarget;
         /// <summary>
+        /// if lighting is enabled
+        /// </summary>
+        public bool LightingEnabled;
+        /// <summary>
         /// effect for making light affect the light target
         /// </summary>
         public Effect LightEffect;
@@ -89,6 +93,7 @@ namespace PlatformerEngine
             GameObjectList = new List<GameObject>();
             GameTileList = new List<GameTile>();
             LightList = new List<Light>();
+            LightingEnabled = false;
             Physics = null;
             var pp = Engine.Game.GraphicsDevice.PresentationParameters;
             MainTarget = new RenderTarget2D(Engine.Game.GraphicsDevice, pp.BackBufferWidth, pp.BackBufferHeight);
@@ -122,23 +127,26 @@ namespace PlatformerEngine
         public void Draw(SpriteBatch spriteBatch)
         {
             Vector2 ceiledOffset = new Vector2((float)(Math.Ceiling(Math.Abs(ViewPosition.X) * Math.Sign(ViewPosition.X))), (float)(Math.Ceiling(Math.Abs(ViewPosition.Y) * Math.Sign(ViewPosition.Y))));
-            spriteBatch.GraphicsDevice.SetRenderTarget(LightTarget);
-            spriteBatch.GraphicsDevice.Clear(Color.Black);
-            spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive);
-            for (int i = 0; i < LightList.Count; i++)
+            if (LightingEnabled)
             {
-                Light light = LightList[i];
-                light.Draw(spriteBatch, ceiledOffset);
+                spriteBatch.GraphicsDevice.SetRenderTarget(LightTarget);
+                spriteBatch.GraphicsDevice.Clear(Color.Black);
+                spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive);
+                for (int i = 0; i < LightList.Count; i++)
+                {
+                    Light light = LightList[i];
+                    light.Draw(spriteBatch, ceiledOffset);
+                }
+                spriteBatch.End();
             }
-            spriteBatch.End();
             spriteBatch.GraphicsDevice.SetRenderTarget(MainTarget);
             spriteBatch.GraphicsDevice.Clear(Color.LightGray);
             spriteBatch.Begin(SpriteSortMode.FrontToBack);
+            Background?.Draw(spriteBatch, ceiledOffset);
             if (currentTransition != null && currentTransition.IsActive)
             {
                 currentTransition.Draw(spriteBatch);
             }
-            Background?.Draw(spriteBatch);
             for (int i = 0; i < GameObjectList.Count; i++)
             {
                 GameObjectList[i].Draw(spriteBatch, ceiledOffset);
@@ -151,7 +159,7 @@ namespace PlatformerEngine
             spriteBatch.GraphicsDevice.SetRenderTarget(null);
             spriteBatch.GraphicsDevice.Clear(Color.Black);
             spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend);
-            if (LightEffect != null)
+            if (LightEffect != null && LightingEnabled)
             {
                 LightEffect.Parameters["lightMask"].SetValue(LightTarget);
                 LightEffect.CurrentTechnique.Passes[0].Apply();
@@ -159,6 +167,10 @@ namespace PlatformerEngine
             spriteBatch.Draw(MainTarget, new Vector2(0, 0), Color.White);
             spriteBatch.End();
         }
+        /// <summary>
+        /// tell everything in the room to load assets
+        /// </summary>
+        /// <param name="assets">the asset manager to use to load</param>
         public void LoadAssets(AssetManager assets)
         {
             Background?.Load(assets);
@@ -301,7 +313,7 @@ namespace PlatformerEngine
                 if(backgroundType.Equals("static"))
                 {
                     string backAssetName = (string)backObj.GetValue("name").ToObject(typeof(string));
-                    Background = new StaticBackground(backAssetName);
+                    Background = new StaticBackground(this, backAssetName);
                 }
                 else if(backgroundType.Equals("parallax"))
                 {

@@ -139,19 +139,13 @@ namespace PlatformerEngine
         /// <param name="callback">what to call back when we get the frames</param>
         public void RequestFramedTexture(string assetName, Action<Texture2D[]> callback)
         {
-            ConsoleManager.WriteLine("requesting framed texture \"" + assetName + "\"");
-            Action<Texture2D[]> newCallback = (asset) =>
-            {
-                ConsoleManager.WriteLine("sent framed texture \"" + assetName + "\"");
-                callback(asset);
-            };
             if (framedTextureAssets.ContainsKey(assetName))
             {
-                newCallback.Invoke(framedTextureAssets[assetName]);
+                callback.Invoke(framedTextureAssets[assetName]);
             }
             else
             {
-                framedTextureAssetRequests.Add(new KeyValuePair<string, Action<Texture2D[]>>(assetName, newCallback));
+                framedTextureAssetRequests.Add(new KeyValuePair<string, Action<Texture2D[]>>(assetName, callback));
             }
         }
         /// <summary>
@@ -161,19 +155,13 @@ namespace PlatformerEngine
         /// <param name="callback">what to call back when we get the texture</param>
         public void RequestTexture(string assetName, Action<Texture2D> callback)
         {
-            ConsoleManager.WriteLine("requesting texture \"" + assetName + "\"");
-            Action<Texture2D> newCallback = (asset) =>
-            {
-                ConsoleManager.WriteLine("sent texture \"" + assetName + "\"");
-                callback(asset);
-            };
             if (textureAssets.ContainsKey(assetName))
             {
-                newCallback.Invoke(textureAssets[assetName]);
+                callback.Invoke(textureAssets[assetName]);
             }
             else
             {
-                textureAssetRequests.Add(new KeyValuePair<string, Action<Texture2D>>(assetName, newCallback));
+                textureAssetRequests.Add(new KeyValuePair<string, Action<Texture2D>>(assetName, callback));
             }
         }
         /// <summary>
@@ -231,7 +219,6 @@ namespace PlatformerEngine
                 string internalName = (string)assetObject.GetValue("name").ToObject(typeof(string));
                 string typeName = (string)assetObject.GetValue("type").ToObject(typeof(string));
                 string path = (string)assetObject.GetValue("path").ToObject(typeof(string));
-                ConsoleManager.WriteLine("got \"" + internalName + "\"", "load");
                 if(typeName.Equals("texture"))
                 {
                     LoadTexture(internalName, path);

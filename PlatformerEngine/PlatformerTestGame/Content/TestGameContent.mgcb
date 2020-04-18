@@ -26,6 +26,12 @@
 /processorParam:TextureFormat=Compressed
 /build:mainFont.spritefont
 
+#begin sounds/airjump.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:sounds/airjump.wav
+
 #begin sounds/bossTheme.mp3
 /importer:Mp3Importer
 /processor:SoundEffectProcessor
@@ -43,6 +49,12 @@
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:sounds/Ding.wav
+
+#begin sounds/groundjump.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:sounds/groundjump.wav
 
 #begin sounds/Hhuh - Copy.wav
 /importer:WavImporter
@@ -62,11 +74,47 @@
 /processorParam:Quality=Best
 /build:sounds/JumpReset.wav
 
+#begin sounds/magic.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:sounds/magic.wav
+
+#begin sounds/magic2.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:sounds/magic2.wav
+
 #begin sounds/ReimuDamaged.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:sounds/ReimuDamaged.wav
+
+#begin sounds/swing.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:sounds/swing.wav
+
+#begin sounds/swing2.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:sounds/swing2.wav
+
+#begin sounds/swing3.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:sounds/swing3.wav
+
+#begin sounds/Theme.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:sounds/Theme.wav
 
 #begin sounds/Theme.wav
 /importer:WavImporter

@@ -51,10 +51,15 @@
     <Compile Include="GameObjects\CameraObject.cs" />
     <Compile Include="GameObjects\CrosshairObject.cs" />
     <Compile Include="GameObjects\DamageBlockObject.cs" />
+    <Compile Include="GameTiles\StoneSideBottomTile.cs" />
     <Compile Include="GameTiles\DirtSideBottomTile.cs" />
+    <Compile Include="GameTiles\StoneSideLeftTile.cs" />
     <Compile Include="GameTiles\DirtSideLeftTile.cs" />
+    <Compile Include="GameTiles\StoneSideRightTile.cs" />
     <Compile Include="GameTiles\DirtSideRightTile.cs" />
+    <Compile Include="GameTiles\StoneSideTopTile.cs" />
     <Compile Include="GameTiles\DirtSideTopTile.cs" />
+    <Compile Include="GameTiles\StoneTile.cs" />
     <Compile Include="GameTiles\DirtTile.cs" />
     <Compile Include="GameObjects\FairyObject.cs" />
     <Compile Include="GameObjects\GameWinObject.cs" />
@@ -139,6 +144,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Levels\level1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Levels\test1.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

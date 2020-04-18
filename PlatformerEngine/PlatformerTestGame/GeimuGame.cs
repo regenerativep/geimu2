@@ -32,7 +32,7 @@ namespace PlatformerTestGame
         /// </summary>
         protected override void Initialize()
         {
-            IsMouseVisible = true;
+            //IsMouseVisible = true;
             Window.Title = "Geimu 2";
             ChangeResolution(1024, 768);
 
@@ -53,8 +53,10 @@ namespace PlatformerTestGame
             PEngine.NameToType["obj_fairy"] = typeof(FairyObject);
             PEngine.NameToType["obj_damageblock"] = typeof(DamageBlockObject);
             PEngine.NameToType["tle_stonebrick"] = typeof(StoneBrickTile);
+            PEngine.NameToType["tle_dirt"] = typeof(DirtTile);
+            PEngine.NameToType["tle_stone"] = typeof(StoneTile);
 
-            Engine.ChangeRoom((new Room(Engine)).Load("levels/level1.json"));
+            Engine.ChangeRoom((new Room(Engine)).Load("levels/test1.json"));
 
             base.Initialize();
         }

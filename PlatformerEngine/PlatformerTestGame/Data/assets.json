@@ -163,6 +163,26 @@
       "path": "sprites/2huDirtEdgeTop"
     },
     {
+      "name": "spr_stoneedgebottom",
+      "type": "texture",
+      "path": "sprites/stonesidebottom"
+    },
+    {
+      "name": "spr_stoneedgeleft",
+      "type": "texture",
+      "path": "sprites/stonesideleft"
+    },
+    {
+      "name": "spr_stoneedgeright",
+      "type": "texture",
+      "path": "sprites/stonesideleft"
+    },
+    {
+      "name": "spr_stoneedgetop",
+      "type": "texture",
+      "path": "sprites/stonesidetop"
+    },
+    {
       "name": "spr_grass",
       "type": "texture",
       "path": "sprites/2hugrass2"
