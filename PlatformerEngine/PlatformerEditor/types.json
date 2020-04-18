@@ -1,0 +1,78 @@
+{
+  "objectTypes": [
+    {
+      "name": "Block",
+      "internalName": "obj_block",
+      "width": "32",
+      "height": "32"
+    },
+    {
+      "name": "Player",
+      "internalName": "obj_player",
+      "width": "64",
+      "height": "64"
+    },
+    {
+      "name": "Fairy",
+      "internalName": "obj_fairy",
+      "width": "32",
+      "height": "32"
+    },
+    {
+      "name": "Boss",
+      "internalName": "obj_boss",
+      "width": "32",
+      "height": "64"
+    },
+    {
+      "name": "Goal",
+      "internalName": "obj_goalblock",
+      "width": "32",
+      "height": "32"
+    },
+    {
+      "name": "Camera",
+      "internalName": "obj_camera",
+      "width": "16",
+      "height": "16"
+    },
+    {
+      "name": "Crosshair",
+      "internalName": "obj_crosshair",
+      "width": "16",
+      "height": "16"
+    },
+    {
+      "name": "Note",
+      "internalName": "obj_note",
+      "width": "32",
+      "height": "32"
+    },
+    {
+      "name": "JumpReset",
+      "internalName": "obj_jumpreset",
+      "width": "16",
+      "height": "16"
+    },
+    {
+      "name": "JumpParticle",
+      "internalName": "obj_jumpparticle",
+      "width": "16",
+      "height": "8"
+    },
+    {
+      "name": "DamageBlock",
+      "internalName": "obj_damageblock",
+      "width": "16",
+      "height": "16"
+    }
+  ],
+	"tileTypes": [
+		{
+			"name": "Stone Brick",
+			"internalName": "tle_stonebrick",
+			"width": "64",
+			"height": "64"
+		}
+	]
+}
