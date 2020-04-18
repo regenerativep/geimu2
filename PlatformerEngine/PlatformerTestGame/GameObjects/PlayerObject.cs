@@ -31,7 +31,7 @@ namespace PlatformerTestGame.GameObjects
         public bool Grounded;
         public int JumpsLeft;
         public int JumpCooldown;
-        public Texture2D IdleImage;
+        public Texture2D[] IdleImage;
         public Texture2D[] RunImage;
         public MouseState MouseState, PrevMouseState;
         public SpriteFont Font;
@@ -105,22 +105,19 @@ namespace PlatformerTestGame.GameObjects
         }
         public override void Load(AssetManager assets)
         {
-            assets.RequestTexture("obj_player_idle", (tex) =>
+            assets.RequestFramedTexture("spr_reimuidle", (frames) =>
             {
-                IdleImage = tex;
+                IdleImage = frames;
                 Sprite.Change(IdleImage);
+                Sprite.Size = new Vector2(64, 64);
             });
-            assets.RequestFramedTexture("obj_player_run", (frames) =>
+            assets.RequestFramedTexture("spr_reimurun", (frames) =>
             {
                 RunImage = frames;
             });
             assets.RequestFont("fnt_main", (font) =>
             {
                 Font = font;
-            });
-            assets.RequestSound("msc_main", (snd) =>
-            {
-                Room.Sounds.PlayMusic(snd, 0.4f);
             });
             assets.RequestSound("snd_jump_ground", (snd) =>
             {
@@ -136,16 +133,15 @@ namespace PlatformerTestGame.GameObjects
                 Light.Sprite.Size = new Vector2(1024, 1024);
                 Light.Sprite.Offset = -Light.Sprite.Size / 2;
             });
-            assets.RequestTexture("bg_stoneBrick", (tex) =>
-            {
-                Room.Background.Change(tex);
-                Room.Background.Size = new Vector2(Room.Width, Room.Height);
-            });
             Sprite.Size = new Vector2(48, 64);
             Sprite.Offset = -(new Vector2(Sprite.Size.X / 2, Sprite.Size.Y / 2 + (Sprite.Size.Y - Sprite.Size.X) / 2));
             Sprite.Speed = 0.2f;
             Room.GameObjectList.Add(new ItemObject(Room, new Vector2(192, 640), new SwordItem(Room)));
             Room.GameObjectList.Add(new ItemObject(Room, new Vector2(768, 640), new MagicItem(Room)));
+        }
+        public void ResetJumps()
+        {
+            JumpsLeft = MaxJumpsLeft;
         }
         public override void Update()
         {
@@ -163,7 +159,7 @@ namespace PlatformerTestGame.GameObjects
                 {
                     Velocity.X = 0;
                 }
-                JumpsLeft = MaxJumpsLeft;
+                ResetJumps();
             }
             else
             {
@@ -230,30 +226,6 @@ namespace PlatformerTestGame.GameObjects
                 Item?.DoUse(this);
             }
             GeimuGame game = (GeimuGame)Room.Engine.Game;
-            if (Position.X > Room.Width && Velocity.X > 0)
-            {
-                Position.X -= Room.Width;
-                game.GoToRoom(game.CurrentRoomX + 1, game.CurrentRoomY);
-                JumpsLeft = MaxJumpsLeft;
-            }
-            else if (Position.X < 0 && Velocity.X < 0)
-            {
-                Position.X += Room.Width;
-                game.GoToRoom(game.CurrentRoomX - 1, game.CurrentRoomY);
-                JumpsLeft = MaxJumpsLeft;
-            }
-            else if (Position.Y > Room.Height && Velocity.Y > 0)
-            {
-                Position.Y -= Room.Height;
-                game.GoToRoom(game.CurrentRoomX, game.CurrentRoomY + 1);
-                JumpsLeft = MaxJumpsLeft;
-            }
-            else if (Position.Y < 0 && Velocity.Y < 0)
-            {
-                Position.Y += Room.Height;
-                game.GoToRoom(game.CurrentRoomX, game.CurrentRoomY - 1);
-                JumpsLeft = MaxJumpsLeft;
-            }
             Rectangle hitbox = GetHitbox();
             hitbox.Location += Position.ToPoint();
             GameObject itemObject = Room.FindCollision(hitbox, "obj_item");

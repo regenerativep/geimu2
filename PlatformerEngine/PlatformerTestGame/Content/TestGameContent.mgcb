@@ -28,7 +28,7 @@
 
 #begin sounds/bossTheme.mp3
 /importer:Mp3Importer
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:sounds/bossTheme.mp3
 
@@ -157,18 +157,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:sprites/blockplaceholder.png
-
-#begin sprites/bullet.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:sprites/bullet.png
 
 #begin sprites/bullet.png
 /importer:TextureImporter
@@ -758,7 +746,7 @@
 /processorParam:TextureFormat=Color
 /build:sprites/RainbowOrb.png
 
-#begin sprites/reimu/ReimuGJIdlepose-1.png
+#begin sprites/reimu/0.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -768,9 +756,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:sprites/reimu/ReimuGJIdlepose-1.png
+/build:sprites/reimu/0.png
 
-#begin sprites/reimu/ReimuGJIdlepose-2 (1).png
+#begin sprites/reimu/1.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -780,9 +768,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:sprites/reimu/ReimuGJIdlepose-2 (1).png
+/build:sprites/reimu/1.png
 
-#begin sprites/reimu/ReimuGJIdlepose-2.png
+#begin sprites/reimu/2.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -792,19 +780,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:sprites/reimu/ReimuGJIdlepose-2.png
-
-#begin sprites/reimu/ReimuGJIdlepose-3.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:sprites/reimu/ReimuGJIdlepose-3.png
+/build:sprites/reimu/2.png
 
 #begin sprites/ReimuCard.png
 /importer:TextureImporter

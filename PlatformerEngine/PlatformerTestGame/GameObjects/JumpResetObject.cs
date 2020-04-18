@@ -5,25 +5,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Graphics;
+using PlatformerEngine;
 
-namespace Geimu.GameObjects
+namespace PlatformerTestGame.GameObjects
 {
     public class JumpResetObject : GameObject
     {
         private static int StepsUntilReset = 180;
         public bool IsActive { get; set; }
         private int stepsRemaning;
-        public JumpResetObject(Room room, Vector2 pos) : base(room, pos, new Vector2(0, 0), new Vector2(32, 32))
+        public JumpResetObject(Room room, Vector2 pos) : base(room, pos)
         {
-            Hitbox = new Rectangle(8, 8, 16, 16);
             IsActive = true;
             stepsRemaning = 0;
-            Sprite = new SpriteData();
-            Sprite.Size = new Vector2(24, 24);
-            AssetManager.RequestTexture("jumpReset", (frames) =>
+        }
+        public override void Load(AssetManager assets)
+        {
+            assets.RequestTexture("spr_jumpreset", (frames) =>
             {
                 Sprite.Change(frames);
                 Sprite.Speed = 0.5f;
+                Sprite.Size = new Vector2(24, 24);
             });
         }
         public override void Update()
@@ -43,6 +45,8 @@ namespace Geimu.GameObjects
         }
         public void Use()
         {
+            PlayerObject player = (PlayerObject)Room.FindObject("obj_player");
+            player.ResetJumps();
             IsActive = false;
             stepsRemaning = StepsUntilReset;
         }

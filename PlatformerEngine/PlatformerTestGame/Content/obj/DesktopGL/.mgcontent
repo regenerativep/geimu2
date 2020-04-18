@@ -4,235 +4,121 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/mainFont.spritefont</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sounds/bossTheme.mp3</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sounds/CardToss.wav</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sounds/Ding.wav</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sounds/Hhuh - Copy.wav</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sounds/Hhuh.wav</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sounds/JumpReset.wav</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sounds/ReimuDamaged.wav</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sounds/Theme.wav</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/2huDirtEdgeBottom.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/2huDirtEdgeLeft.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/2huDirtEdgeRight.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/2huDirtEdgeTop.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/2hugrass.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/2hugrass2.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/blockplaceholder.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/bullet.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/circularLight.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/clownpiece/0.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/clownpiece/1.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/clownpiece/2.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/crosshair/0.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/crosshair/1.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/crosshair/2.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/crosshair/bigcursor.gif</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/crosshair/GJCursor.gif</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/dirt.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/dirt2.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/fairy/0 - Copy.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/fairy/0.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/fairy/1 - Copy.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/fairy/1.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/fairy/2.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/fairy/3.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/fairy/3e58b047-94b4-11e9-b85d-21f128d46dcd.gif</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/GJpaper.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/GJstone1.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/GJtextbox.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/Grass.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/HakureiShrine.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/HakureiShrine2.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/HakureiShrine3.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/Healthbar.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/HealthbarFrame.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/HumanVillage0.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/HumanVillage1.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/HumanVillage2.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/jumpParticle/0.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/jumpParticle/1.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/jumpParticle/2.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/jumpParticle/Jumparticle.gif</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/jumpreset.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/life.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/MoriyaShrine1.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/MoriyaShrine2.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/MoriyaShrine3.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/MoriyaShrine4.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/MoriyaShrine5.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/myourentemple1.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/myourentemple2.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/myourentemple3.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/myourentemple4.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/myourentemple5.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/PurpleBall.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/RainbowOrb.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimu/ReimuGJIdlepose-1.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimu/ReimuGJIdlepose-2 (1).png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimu/ReimuGJIdlepose-2.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimu/ReimuGJIdlepose-3.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/ReimuCard.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuFall.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuJump.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/0.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/1.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/2.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/3.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/4.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/5.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/6.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/7.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/old/0.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/old/1.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/old/2.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/old/3.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/old/4.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/old/5.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/old/6.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/old/7.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/spikebottom.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/spikeleft.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/spikeright.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/spiketop.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stoneBrick/stoneBrick_all.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stoneBrick/stoneBrick_background.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stoneBrick/stoneBrick_bottom.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stoneBrick/stoneBrick_bottomleft.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stoneBrick/stoneBrick_bottomright.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stoneBrick/stoneBrick_left.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stoneBrick/stoneBrick_leftright.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stoneBrick/stoneBrick_none.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stoneBrick/stoneBrick_right.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stonesidebottom.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stonesideleft.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stonesideright.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stonesidetop.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/yinYang/0.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/yinYang/1.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/yinYang/2.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/yinYang/3.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/YokaiMountain1.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/YokaiMountain2.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/YokaiMountain3.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/YokaiMountain4.png</File>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/YokaiMountain5.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sounds/bossTheme.mp3</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/mainFont.spritefont</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sounds/CardToss.wav</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sounds/Ding.wav</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sounds/Hhuh - Copy.wav</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sounds/Hhuh.wav</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sounds/JumpReset.wav</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sounds/ReimuDamaged.wav</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sounds/Theme.wav</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/2huDirtEdgeBottom.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/2huDirtEdgeLeft.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/2huDirtEdgeRight.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/2huDirtEdgeTop.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/2hugrass.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/2hugrass2.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/blockplaceholder.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/bullet.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/circularLight.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/clownpiece/0.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/clownpiece/1.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/clownpiece/2.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/crosshair/0.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/crosshair/1.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/crosshair/2.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/crosshair/bigcursor.gif</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/crosshair/GJCursor.gif</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/dirt.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/dirt2.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/fairy/0 - Copy.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/fairy/0.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/fairy/1 - Copy.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/fairy/1.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/fairy/2.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/fairy/3.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/fairy/3e58b047-94b4-11e9-b85d-21f128d46dcd.gif</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/GJpaper.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/GJstone1.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/GJtextbox.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/Grass.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/HakureiShrine.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/HakureiShrine2.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/HakureiShrine3.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/Healthbar.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/HealthbarFrame.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/HumanVillage0.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/HumanVillage1.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/HumanVillage2.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/jumpParticle/0.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/jumpParticle/1.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/jumpParticle/2.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/jumpParticle/Jumparticle.gif</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/jumpreset.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/life.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/MoriyaShrine1.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/MoriyaShrine2.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/MoriyaShrine3.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/MoriyaShrine4.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/MoriyaShrine5.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/myourentemple1.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/myourentemple2.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/myourentemple3.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/myourentemple4.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/myourentemple5.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/PurpleBall.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/RainbowOrb.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimu/0.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimu/1.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimu/2.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/ReimuCard.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuFall.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuJump.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/0.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/1.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/2.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/3.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/4.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/5.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/6.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/7.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/old/0.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/old/1.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/old/2.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/old/3.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/old/4.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/old/5.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/old/6.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/reimuRun/old/7.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/spikebottom.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/spikeleft.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/spikeright.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/spiketop.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stoneBrick/stoneBrick_all.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stoneBrick/stoneBrick_background.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stoneBrick/stoneBrick_bottom.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stoneBrick/stoneBrick_bottomleft.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stoneBrick/stoneBrick_bottomright.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stoneBrick/stoneBrick_left.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stoneBrick/stoneBrick_leftright.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stoneBrick/stoneBrick_none.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stoneBrick/stoneBrick_right.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stonesidebottom.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stonesideleft.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stonesideright.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stonesidetop.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/yinYang/0.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/yinYang/1.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/yinYang/2.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/yinYang/3.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/YokaiMountain1.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/YokaiMountain2.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/YokaiMountain3.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/YokaiMountain4.png</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/YokaiMountain5.png</File>
   </SourceFiles>
   <DestFiles>
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>

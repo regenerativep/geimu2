@@ -49,11 +49,12 @@ namespace PlatformerTestGame
             PEngine.NameToType["obj_crosshair"] = typeof(CrosshairObject);
             PEngine.NameToType["obj_jumpparticle"] = typeof(JumpParticleObject);
             PEngine.NameToType["obj_jumpreset"] = typeof(JumpResetObject);
-            PEngine.NameToType["obj_note"] = typeof(NoteObject);
             PEngine.NameToType["obj_goalblock"] = typeof(GoalBlockObject);
             PEngine.NameToType["obj_fairy"] = typeof(FairyObject);
             PEngine.NameToType["obj_damageblock"] = typeof(DamageBlockObject);
+            PEngine.NameToType["tle_stonebrick"] = typeof(StoneBrickTile);
 
+            Engine.ChangeRoom((new Room(Engine)).Load("levels/level1.json"));
 
             base.Initialize();
         }
@@ -84,7 +85,7 @@ namespace PlatformerTestGame
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            Engine.Assets.LoadAssetsFromFile("Data/assets.json");
+            Engine.Load("Data/assets.json");
             Engine.CurrentRoom.LightEffect = Content.Load<Effect>("lighteffect"); //dont want to add another part to the asset manager just for this
         }
 

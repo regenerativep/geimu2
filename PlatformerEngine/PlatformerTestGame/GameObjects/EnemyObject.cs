@@ -12,7 +12,7 @@ using PlatformerTestGame.Items;
 
 namespace PlatformerTestGame.GameObjects
 {
-    public class EnemyObject : GameObject, IDamagable
+    public abstract class EnemyObject : GameObject, IDamagable
     {
         public static float DefaultMaxHealth = 1;
         public Item Item;
@@ -51,92 +51,7 @@ namespace PlatformerTestGame.GameObjects
             {
                 Room.GameObjectList.Remove(this);
                 originalRoom.GameObjectList.Remove(this);
-                PlayerObject playerObject = (PlayerObject)Room.FindObject("obj_player");
-                if(playerObject != null)
-                {
-                    playerObject.MaxHealth += 4;
-                    playerObject.Health += 4;
-                }
             }
-        }
-        
-        public override void Update()
-        {
-            float moveSpeed = AirSpeed;
-            if(Room.FindCollision(new Rectangle((Position + Sprite.Offset + new Vector2(0, 8)).ToPoint(), Sprite.Size.ToPoint()), "obj_block") != null)
-            {
-                Grounded = true;
-                moveSpeed = GroundSpeed;
-                if(Math.Abs(Velocity.X) > GroundFriction)
-                {
-                    Velocity.X -= Math.Sign(Velocity.X) * GroundFriction;
-                }
-                else
-                {
-                    Velocity.X = 0;
-                }
-            }
-            else
-            {
-                Grounded = false;
-            }
-
-            //AI CODE HERE
-            PlayerObject Player = (PlayerObject)Room.FindObject("obj_player");
-            if (Player != null)
-            {
-                float TargetX = Player.Position.X;
-                float TargetY = Player.Position.Y;
-                if (Position.X > TargetX)
-                {
-                    Velocity.X = -(MaxVelocity.X);
-                }
-                else
-                {
-                    Velocity.X = MaxVelocity.X;
-                }
-                if (Position.Y > TargetY)
-                {
-                    Velocity.Y = -(MaxVelocity.Y);
-                }
-                else
-                {
-                    Velocity.Y = MaxVelocity.Y;
-                }
-                if (MeleeCooldown == 0 && Room.FindCollision(new Rectangle((Position + Sprite.Offset).ToPoint(), Sprite.Size.ToPoint()), "obj_player") != null)
-                {
-                    MeleeCooldown = MaxMeleeCooldown;
-                    Player.Damage(2);
-                }
-            }
-            else
-            {
-                Velocity.X = 0;
-            }
-            
-            
-
-            if (Velocity.X > MinDirectionChangeSpeed)
-            {
-                Sprite.SpriteEffect = SpriteEffects.None;
-            }
-            else if (Velocity.X < -MinDirectionChangeSpeed)
-            {
-                Sprite.SpriteEffect = SpriteEffects.FlipHorizontally;
-            }
-            Sprite.Change(RunImage);
-            
-            
-            if (Position.X > Room.Width)
-            {
-                Room.GameObjectList.Remove(this); //might not work
-            }
-            if(MeleeCooldown > 0)
-            {
-                MeleeCooldown--;
-            }
-            
-            base.Update();
         }
     }
 }

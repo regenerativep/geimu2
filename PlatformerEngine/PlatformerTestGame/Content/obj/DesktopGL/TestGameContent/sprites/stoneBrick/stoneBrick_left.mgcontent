@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stoneBrick/stoneBrick_left.png</SourceFile>
-  <SourceTime>2020-04-09T13:58:23.539291-04:00</SourceTime>
-  <DestFile>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/bin/DesktopGL/TestGameContent/sprites/stoneBrick/stoneBrick_left.xnb</DestFile>
-  <DestTime>2020-04-09T14:12:02.6146476-04:00</DestTime>
+  <SourceFile>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/sprites/stoneBrick/stoneBrick_left.png</SourceFile>
+  <SourceTime>2020-04-11T20:44:27.1217954-04:00</SourceTime>
+  <DestFile>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerTestGame/Content/bin/DesktopGL/TestGameContent/sprites/stoneBrick/stoneBrick_left.xnb</DestFile>
+  <DestTime>2020-04-17T22:29:43.8114189-04:00</DestTime>
   <Importer>TextureImporter</Importer>
-  <ImporterTime>2020-01-01T22:16:05.1742445-05:00</ImporterTime>
+  <ImporterTime>2018-12-08T11:35:54-05:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
-  <ProcessorTime>2020-01-01T22:16:05.1742445-05:00</ProcessorTime>
+  <ProcessorTime>2018-12-08T11:35:54-05:00</ProcessorTime>
   <Parameters>
     <Key>ColorKeyColor</Key>
     <Value>255,0,255,255</Value>

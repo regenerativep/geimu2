@@ -36,7 +36,7 @@ namespace PlatformerEngine
         public PEngine(Game game)
         {
             Game = game;
-            Assets = new AssetManager(game.Content);
+            Assets = new AssetManager(null);
         }
         /// <summary>
         /// changes to a different room
@@ -93,6 +93,11 @@ namespace PlatformerEngine
                     CurrentRoom.Physics = newRoom.Physics;
                 }
             }
+        }
+        public void Load(string filepath)
+        {
+            Assets.Content = Game.Content;
+            Assets.LoadAssetsFromFile(filepath);
         }
         /// <summary>
         /// loads into a different room

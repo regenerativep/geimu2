@@ -40,7 +40,7 @@ namespace PlatformerEngine
         }
         public void Draw(SpriteBatch spriteBatch)
         {
-            if (Images == null || Images.Length > 0) return;
+            if (Images == null || Images.Length == 0) return;
             //find target
             GameObject target = room.FindObject(TargetObjectName);
             //calculate positions and draw images

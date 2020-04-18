@@ -4,7 +4,7 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>/home/sylvia/Documents/Repositories/geimu2/PlatformerEngine/PlatformerEditor/Content/mainFont.spritefont</File>
+    <File>C:/Users/fdela/Documents/Repositories/geimu2/PlatformerEngine/PlatformerEditor/Content/mainFont.spritefont</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

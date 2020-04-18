@@ -13,7 +13,7 @@ namespace PlatformerTestGame.GameObjects
         public GameObject Target { get; set; }
         public float TargetPreference { get; set; }
         public float SelfPreference { get; set; }
-        public CameraObject(Room room, Vector2 pos) : base(room, pos, new Vector2(0, 0), new Vector2(0, 0))
+        public CameraObject(Room room, Vector2 pos) : base(room, pos)
         {
             Target = null;
             TargetPreference = 1;

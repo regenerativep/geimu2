@@ -5,29 +5,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PlatformerEngine;
 
-namespace Geimu.GameObjects
+namespace PlatformerTestGame.GameObjects
 {
     public class JumpParticleObject : GameObject
     {
-        private Texture2D[] jumpSprite;
         private int lifetime;
 
-        public JumpParticleObject(Room room, Vector2 pos) : base(room, pos, new Vector2(0, 0), new Vector2(30, 6))
+        public JumpParticleObject(Room room, Vector2 pos) : base(room, pos)
         {
-            Sprite = new SpriteData();
-            Sprite.Size = new Vector2(30, 6);
-            Sprite.Layer = 1;
-            jumpSprite = null;
             lifetime = 20;
-            AssetManager.RequestTexture("jumpParticle", (frames) =>
-            {
-                jumpSprite = frames;
-                Sprite.Change(jumpSprite);
-            });
-            Sprite.Offset = new Vector2(0, 0);
         }
-
+        public override void Load(AssetManager assets)
+        {
+            assets.RequestFramedTexture("jumpParticle", (frames) =>
+            {
+                Sprite.Change(frames);
+                Sprite.Size = new Vector2(30, 6);
+                Sprite.LayerData = new LayerData(1);
+            });
+        }
         public override void Update()
         {
             lifetime--;

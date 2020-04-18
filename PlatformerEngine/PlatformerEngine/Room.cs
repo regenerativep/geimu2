@@ -69,6 +69,10 @@ namespace PlatformerEngine
         /// background for the room
         /// </summary>
         public Background Background;
+        /// <summary>
+        /// current file name for the room (if loaded from a file)
+        /// </summary>
+        public string CurrentFileName;
         private ITransition currentTransition;
         /// <summary>
         /// creates an instance of a room
@@ -89,6 +93,7 @@ namespace PlatformerEngine
             var pp = Engine.Game.GraphicsDevice.PresentationParameters;
             MainTarget = new RenderTarget2D(Engine.Game.GraphicsDevice, pp.BackBufferWidth, pp.BackBufferHeight);
             LightTarget = new RenderTarget2D(Engine.Game.GraphicsDevice, pp.BackBufferWidth, pp.BackBufferHeight);
+            CurrentFileName = "";
         }
         /// <summary>
         /// updates the room and everything inside it
@@ -270,6 +275,7 @@ namespace PlatformerEngine
         /// <param name="filename">the filename with the room data</param>
         public Room Load(string filename)
         {
+            CurrentFileName = filename;
             //get the json
             string json = File.ReadAllText(filename, Encoding.UTF8);
             //turn it into an internal json object
@@ -300,7 +306,7 @@ namespace PlatformerEngine
                 else if(backgroundType.Equals("parallax"))
                 {
                     JArray backAssetNames = (JArray)backObj.GetValue("names").ToObject(typeof(JArray));
-                    string targetName = (string)backObj.GetValue("targetName").ToObject(typeof(string));
+                    string targetName = (string)backObj.GetValue("target").ToObject(typeof(string));
                     string[] names = new string[backAssetNames.Count];
                     float[] speeds = new float[backAssetNames.Count];
                     for(int i = 0; i < backAssetNames.Count; i++)
@@ -326,6 +332,7 @@ namespace PlatformerEngine
                     Type type = PEngine.GetTypeFromName(internalName);
                     if (type == null)
                     {
+
                         ConsoleManager.WriteLine("could not find object name \"" + internalName + "\"", "err");
                         continue;
                     }

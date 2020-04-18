@@ -13,6 +13,7 @@ namespace PlatformerTestGame.GameObjects
     {
         public StoneBrickTile(Room room, Vector2 position) : base(room, position)
         {
+            ConsoleManager.WriteLine("asdf");
             Sprite.Size = new Vector2(64, 64);
         }
         public override void Load(AssetManager assets)
