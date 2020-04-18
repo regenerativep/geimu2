@@ -152,7 +152,7 @@ namespace PlatformerEngine
         /// gets the hitbox made up of position and sprite size
         /// </summary>
         /// <returns>the hitbox</returns>
-        public Rectangle GetHitbox()
+        public virtual Rectangle GetHitbox()
         {
             return new Rectangle((Sprite.Offset - Sprite.Origin).ToPoint(), Sprite.Size.ToPoint());
         }

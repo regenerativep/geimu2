@@ -137,6 +137,16 @@
       "frames": 8
     },
     {
+      "name": "spr_reimufall",
+      "type": "texture",
+      "path": "sprites/reimuFall"
+    },
+    {
+      "name": "spr_reimujump",
+      "type": "texture",
+      "path": "sprites/reimuJump"
+    },
+    {
       "name": "spr_yinyang",
       "type": "framedTexture",
       "path": "sprites/yinYang/",

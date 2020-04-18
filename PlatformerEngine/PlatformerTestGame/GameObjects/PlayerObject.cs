@@ -20,6 +20,7 @@ namespace PlatformerTestGame.GameObjects
         public static float GroundFriction = 0.4f;
         public static int MaxJumpsLeft = 1;
         public static int MaxJumpCooldown = 15;
+        public static float MinVerticalVelocityImage = 2f;
 
         public Item Item;
         public InputManager Input;
@@ -33,6 +34,8 @@ namespace PlatformerTestGame.GameObjects
         public int JumpCooldown;
         public Texture2D[] IdleImage;
         public Texture2D[] RunImage;
+        public Texture2D JumpImage;
+        public Texture2D FallImage;
         public MouseState MouseState, PrevMouseState;
         public SpriteFont Font;
         public SoundEffect JumpSound, AirJumpSound;
@@ -53,6 +56,8 @@ namespace PlatformerTestGame.GameObjects
             MinRunAnimationSpeed = 2f;
             IdleImage = null;
             RunImage = null;
+            JumpImage = null;
+            FallImage = null;
             Font = null;
             Left = new KeyInputTrigger(Keys.A);
             Right = new KeyInputTrigger(Keys.D);
@@ -114,6 +119,14 @@ namespace PlatformerTestGame.GameObjects
             assets.RequestFramedTexture("spr_reimurun", (frames) =>
             {
                 RunImage = frames;
+            });
+            assets.RequestTexture("spr_reimufall", (tex) =>
+            {
+                FallImage = tex;
+            });
+            assets.RequestTexture("spr_reimujump", (tex) =>
+            {
+                JumpImage = tex;
             });
             assets.RequestFont("fnt_main", (font) =>
             {
@@ -212,13 +225,29 @@ namespace PlatformerTestGame.GameObjects
             {
                 Sprite.SpriteEffect = SpriteEffects.FlipHorizontally;
             }
-            if(Math.Abs(Velocity.X) >= MinRunAnimationSpeed)
+            if(Velocity.Y > MinVerticalVelocityImage)
+            {
+                Sprite.Change(JumpImage);
+                Sprite.Size = new Vector2(64, 96);
+                Sprite.Offset = new Vector2(0, -32);
+            }
+            else if(Velocity.Y < -MinVerticalVelocityImage)
+            {
+                Sprite.Change(FallImage);
+                Sprite.Size = new Vector2(64, 96);
+                Sprite.Offset = new Vector2(0, -32);
+            }
+            else if(Math.Abs(Velocity.X) >= MinRunAnimationSpeed)
             {
                 Sprite.Change(RunImage);
+                Sprite.Size = new Vector2(64, 64);
+                Sprite.Offset = new Vector2(0, 0);
             }
             else
             {
                 Sprite.Change(IdleImage);
+                Sprite.Size = new Vector2(64, 64);
+                Sprite.Offset = new Vector2(0, 0);
             }
             Item?.Update();
             if (MouseState.LeftPressed())
@@ -252,6 +281,19 @@ namespace PlatformerTestGame.GameObjects
             Velocity.Y += Gravity;
             base.Update();
             PrevMouseState = MouseState;
+        }
+        public override Rectangle GetHitbox()
+        {
+            Point size;
+            if(IdleImage == null || IdleImage.Length == 0 || IdleImage[0] == null)
+            {
+                size = new Point(64, 64);
+            }
+            else
+            {
+                size = new Point(IdleImage[0].Width, IdleImage[0].Height);
+            }
+            return new Rectangle(( - Sprite.Origin).ToPoint(), size);
         }
         public override void Draw(SpriteBatch spriteBatch, Vector2 viewPosition)
         {
