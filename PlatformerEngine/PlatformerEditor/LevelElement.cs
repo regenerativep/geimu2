@@ -55,7 +55,7 @@ namespace PlatformerEditor
             {
                 return Math.Sign(b - a);
             });
-            for(int i = 0; i < layerKeys.Count; i++)
+            for(int i = layerKeys.Count - 1; i >= 0; i--)
             {
                 WorldLayer worldLayer = actualGame.WorldLayers[layerKeys[i]];
                 if (!worldLayer.IsVisible) continue;
@@ -111,6 +111,10 @@ namespace PlatformerEditor
                     WorldItem item = new WorldItem(UIManager, actualGame.CurrentWorldItemType, SnapPosition(mousePos), actualGame.CurrentWorldLayer.DrawLayer);
                     actualGame.CurrentWorldLayer.WorldItems.Add(item);
                 }
+                else
+                {
+                    PanIsPressed = true;
+                }
             }
             else if(mouseState.RightPressed())
             {
@@ -149,9 +153,17 @@ namespace PlatformerEditor
         }
         public override void MouseReleased(MouseState mouseState, Vector2 offset)
         {
+            PlatformerEditor actualGame = (PlatformerEditor)UIManager.Game;
             if (!mouseState.MiddlePressed())
             {
                 PanIsPressed = false;
+            }
+            else if (!mouseState.LeftPressed())
+            {
+                if (!(actualGame.CurrentWorldLayer != null && actualGame.CurrentWorldItemType != null))
+                {
+                    PanIsPressed = false;
+                }
             }
             base.MouseReleased(mouseState, offset);
         }

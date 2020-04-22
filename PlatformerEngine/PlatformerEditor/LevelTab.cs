@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
+using System.Runtime;
 
 namespace PlatformerEditor
 {
@@ -31,7 +32,8 @@ namespace PlatformerEditor
                 {
                     return;
                 }
-                actualGame.LoadLevel(filename);
+                actualGame.LoadLevel("../../../../../PlatformerTestGame/Levels/" + filename);
+                //actualGame.LoadLevel(filename);
             };
             ButtonElement saveButton = new ButtonElement(UIManager, new Vector2(48, 536), new Vector2(48, 24), 0.4f, "button_save", "save");
             saveButton.Click = () =>
@@ -41,7 +43,8 @@ namespace PlatformerEditor
                 {
                     return;
                 }
-                actualGame.SaveLevel(filename);
+                actualGame.SaveLevel("../../../../../PlatformerTestGame/Levels/" + filename);
+                //actualGame.SaveLevel(filename);
             };
             Elements.Add(filenameInputElement);
             Elements.Add(loadButton);

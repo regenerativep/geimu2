@@ -17,7 +17,7 @@ namespace PlatformerTestGame.GameObjects
     {
         public static float Gravity = 0.6f;
         public static Vector2 MaxVelocity = new Vector2(8, 16);
-        public static float GroundFriction = 0.4f;
+        public static float GroundFriction = 1f;
         public static int MaxJumpsLeft = 1;
         public static int MaxJumpCooldown = 15;
         public static float MinVerticalVelocityImage = 2f;
@@ -45,7 +45,7 @@ namespace PlatformerTestGame.GameObjects
             JumpsLeft = 0;
             Persistent = true;
             Input = new InputManager();
-            GroundSpeed = 1f;
+            GroundSpeed = 1.5f;
             AirSpeed = 0.3f;
             JumpSpeed = -17f;
             Grounded = false;
@@ -160,7 +160,11 @@ namespace PlatformerTestGame.GameObjects
         {
             MouseState = Mouse.GetState();
             float moveSpeed = AirSpeed;
-            if(Room.FindCollision(new Rectangle((Position + Sprite.Offset + new Vector2(0, 1)).ToPoint(), Sprite.Size.ToPoint()), "obj_block") != null)
+            Rectangle groundCollisionHitbox = new Rectangle(
+                (Position + Sprite.Offset + new Vector2(0, Sprite.Size.Y / 2)).ToPoint(),
+                new Vector2(Sprite.Size.X, Sprite.Size.Y / 2 + 1).ToPoint()
+            );
+            if(Room.FindCollision(groundCollisionHitbox, "obj_block") != null)
             {
                 Grounded = true;
                 moveSpeed = GroundSpeed;
@@ -249,11 +253,11 @@ namespace PlatformerTestGame.GameObjects
                 Sprite.Size = new Vector2(64, 64);
                 Sprite.Offset = new Vector2(0, 0);
             }
-            Item?.Update();
+            /*Item?.Update();
             if (MouseState.LeftPressed())
             {
                 Item?.DoUse(this);
-            }
+            }*/
             GeimuGame game = (GeimuGame)Room.Engine.Game;
             Rectangle hitbox = GetHitbox();
             hitbox.Location += Position.ToPoint();
@@ -297,7 +301,7 @@ namespace PlatformerTestGame.GameObjects
         }
         public override void Draw(SpriteBatch spriteBatch, Vector2 viewPosition)
         {
-            Vector2 drawSize = new Vector2(144, 48);
+            /*Vector2 drawSize = new Vector2(144, 48);
             Vector2 drawFrom = Position - (drawSize / 2) - new Vector2(0, 64) - viewPosition;
             spriteBatch.DrawOutlinedRectangle(drawFrom, drawFrom + drawSize, Color.White, Color.Black, 0.99f);
             spriteBatch.DrawString(Font, "health: " + Health + " / " + MaxHealth, drawFrom + new Vector2(4, 4), Color.Black, 0f, new Vector2(0, 0), 1f, SpriteEffects.None, 1f);
@@ -310,7 +314,7 @@ namespace PlatformerTestGame.GameObjects
             {
                 damageText += "no item";
             }
-            spriteBatch.DrawString(Font, damageText, drawFrom + new Vector2(4, 24), Color.Black, 0f, new Vector2(0, 0), 1f, SpriteEffects.None, 1f);
+            spriteBatch.DrawString(Font, damageText, drawFrom + new Vector2(4, 24), Color.Black, 0f, new Vector2(0, 0), 1f, SpriteEffects.None, 1f);*/
             base.Draw(spriteBatch, viewPosition);
         }
     }

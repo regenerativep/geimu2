@@ -34,7 +34,7 @@ namespace PlatformerEngine
                 assets.RequestTexture(name, (tex) =>
                 {
                     sprite.Change(tex);
-                    sprite.Size = new Vector2(room.Engine.Game.GraphicsDevice.Viewport.Width, room.Engine.Game.GraphicsDevice.Viewport.Height) * 1.1f;
+                    sprite.Size = new Vector2(room.Engine.Game.GraphicsDevice.Viewport.Width, room.Engine.Game.GraphicsDevice.Viewport.Height) * 1.3f;
                     //sprite.Offset = sprite.Size / 2; //new Vector2((room.Engine.Game.GraphicsDevice.Viewport.Width - tex.Width) / 2, (room.Engine.Game.GraphicsDevice.Viewport.Height - tex.Height) / 2);
                 });
             }
