@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using System.Runtime;
+using Microsoft.Xna.Framework.Input;
+using PlatformerEngine;
 
 namespace PlatformerEditor
 {
@@ -92,6 +94,11 @@ namespace PlatformerEditor
             Elements.Add(roomWidthInput);
             Elements.Add(roomHeightInput);
             Elements.Add(setRoomSizeButton);
+        }
+        public override void Scroll(MouseState mouseState, float amount)
+        {
+            ConsoleManager.WriteLine("hello3");
+            base.Scroll(mouseState, amount);
         }
     }
 }

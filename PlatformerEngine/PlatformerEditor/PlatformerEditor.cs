@@ -35,6 +35,7 @@ namespace PlatformerEditor
             };
             Content.RootDirectory = "Content";
             Assets = new AssetManager(null);
+            ConsoleManager.AllowInput = false;
         }
 
         /// <summary>

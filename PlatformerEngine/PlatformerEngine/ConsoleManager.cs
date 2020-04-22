@@ -25,6 +25,10 @@ namespace PlatformerEngine
         /// </summary>
         public static string CurrentInput = "";
         /// <summary>
+        /// if we allow input from the user in the console
+        /// </summary>
+        public static bool AllowInput = true;
+        /// <summary>
         /// list of commands
         /// </summary>
         public static List<ICommand> Commands = new List<ICommand>();
@@ -97,23 +101,26 @@ namespace PlatformerEngine
                 WriteLine("started");
                 while (isRunning)
                 {
-                    ConsoleKeyInfo key = Console.ReadKey();
-                    if(key.Key == ConsoleKey.Enter)
+                    if (AllowInput)
                     {
-                        WriteLine("<" + CurrentInput);
-                        ProcessCommand(CurrentInput);
-                        CurrentInput = "";
-                        WriteInput();
-                    }
-                    else if(key.Key == ConsoleKey.Backspace)
-                    {
-                        CurrentInput = CurrentInput.Substring(0, CurrentInput.Length - 1);
-                        WriteInput();
-                    }
-                    else
-                    {
-                        CurrentInput += key.KeyChar;
-                        WriteInput();
+                        ConsoleKeyInfo key = Console.ReadKey();
+                        if (key.Key == ConsoleKey.Enter)
+                        {
+                            WriteLine("<" + CurrentInput);
+                            ProcessCommand(CurrentInput);
+                            CurrentInput = "";
+                            WriteInput();
+                        }
+                        else if (key.Key == ConsoleKey.Backspace)
+                        {
+                            CurrentInput = CurrentInput.Substring(0, CurrentInput.Length - 1);
+                            WriteInput();
+                        }
+                        else
+                        {
+                            CurrentInput += key.KeyChar;
+                            WriteInput();
+                        }
                     }
                     Thread.Sleep(KeyInputCheckRate);
                 }
