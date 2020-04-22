@@ -19,7 +19,7 @@ namespace PlatformerTestGame.GameObjects
         public static Vector2 MaxVelocity = new Vector2(8, 16);
         public static float GroundFriction = 1f;
         public static int MaxJumpsLeft = 1;
-        public static int MaxJumpCooldown = 15;
+        public static int MaxJumpCooldown = 40;
         public static float MinVerticalVelocityImage = 2f;
 
         public Item Item;
@@ -88,17 +88,9 @@ namespace PlatformerTestGame.GameObjects
         }
         public void Kill()
         {
-            BossObject bossObject = (BossObject)Room.FindObject("obj_boss");
-            if (Room.GameObjectList.Contains(bossObject))
-            {
-                Room.Engine.LoadRoom("Levels/lose.json", new FadeTransition());
-            }
+            //Room.Engine.LoadRoom("Levels/lose.json", new FadeTransition());
             Room.LightList.Remove(Light);
             Room.GameObjectList.Remove(this);
-            if(bossObject != null && Room.GameObjectList.Contains(bossObject))
-            {
-                bossObject.Kill();
-            }
         }
         public void Damage(float amount)
         {
@@ -149,8 +141,8 @@ namespace PlatformerTestGame.GameObjects
             Sprite.Size = new Vector2(48, 64);
             Sprite.Offset = -(new Vector2(Sprite.Size.X / 2, Sprite.Size.Y / 2 + (Sprite.Size.Y - Sprite.Size.X) / 2));
             Sprite.Speed = 0.2f;
-            Room.GameObjectList.Add(new ItemObject(Room, new Vector2(192, 640), new SwordItem(Room)));
-            Room.GameObjectList.Add(new ItemObject(Room, new Vector2(768, 640), new MagicItem(Room)));
+            //Room.GameObjectList.Add(new ItemObject(Room, new Vector2(192, 640), new SwordItem(Room)));
+            //Room.GameObjectList.Add(new ItemObject(Room, new Vector2(768, 640), new MagicItem(Room)));
         }
         public void ResetJumps()
         {
@@ -241,7 +233,7 @@ namespace PlatformerTestGame.GameObjects
                 Sprite.Size = new Vector2(64, 96);
                 Sprite.Offset = new Vector2(0, -32);
             }
-            else if(Math.Abs(Velocity.X) >= MinRunAnimationSpeed)
+            else if(Grounded && Math.Abs(Velocity.X) >= MinRunAnimationSpeed)
             {
                 Sprite.Change(RunImage);
                 Sprite.Size = new Vector2(64, 64);
@@ -252,31 +244,6 @@ namespace PlatformerTestGame.GameObjects
                 Sprite.Change(IdleImage);
                 Sprite.Size = new Vector2(64, 64);
                 Sprite.Offset = new Vector2(0, 0);
-            }
-            /*Item?.Update();
-            if (MouseState.LeftPressed())
-            {
-                Item?.DoUse(this);
-            }*/
-            GeimuGame game = (GeimuGame)Room.Engine.Game;
-            Rectangle hitbox = GetHitbox();
-            hitbox.Location += Position.ToPoint();
-            GameObject itemObject = Room.FindCollision(hitbox, "obj_item");
-            if (itemObject != null)
-            {
-                ItemObject itemContainer = (ItemObject)itemObject;
-                Item = itemContainer.Item;
-                UpgradeObject.Item = Item;
-                Room.GameObjectList.Remove(itemObject);
-            }
-            else
-            {
-                itemObject = Room.FindCollision(hitbox, "obj_upgrade");
-                if (itemObject != null)
-                {
-                    UpgradeObject upgradeObject = (UpgradeObject)itemObject;
-                    upgradeObject.Upgrade();
-                }
             }
             if(JumpCooldown > 0)
             {
