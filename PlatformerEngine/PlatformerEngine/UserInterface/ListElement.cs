@@ -99,12 +99,12 @@ namespace PlatformerEngine.UserInterface
             spriteBatch.DrawOutlinedRectangle(Position + offset, Position + Size + offset, Color.White, Color.Black, Layer);
             base.Draw(spriteBatch, offset);
         }
-        public override void Scroll(MouseState mouseState, float amount)
+        public override void Scroll(MouseState mouseState, float amount, Vector2 offset)
         {
             SoftOffset.Y += amount;
             if (SoftOffset.Y < -MaxScroll) SoftOffset.Y = -MaxScroll;
             if (SoftOffset.Y > 0) SoftOffset.Y = 0;
-            base.Scroll(mouseState, amount);
+            base.Scroll(mouseState, amount, offset);
         }
     }
 }

@@ -17,7 +17,7 @@ namespace PlatformerTestGame.GameObjects
     {
         public static float Gravity = 0.6f;
         public static Vector2 MaxVelocity = new Vector2(8, 16);
-        public static float GroundFriction = 0.4f;
+        public static float GroundFriction = 1f;
         public static int MaxJumpsLeft = 1;
         public static int MaxJumpCooldown = 15;
         public static float MinVerticalVelocityImage = 2f;
@@ -45,7 +45,7 @@ namespace PlatformerTestGame.GameObjects
             JumpsLeft = 0;
             Persistent = true;
             Input = new InputManager();
-            GroundSpeed = 1f;
+            GroundSpeed = 2f;
             AirSpeed = 0.3f;
             JumpSpeed = -17f;
             Grounded = false;
@@ -248,11 +248,6 @@ namespace PlatformerTestGame.GameObjects
                 Sprite.Change(IdleImage);
                 Sprite.Size = new Vector2(64, 64);
                 Sprite.Offset = new Vector2(0, 0);
-            }
-            Item?.Update();
-            if (MouseState.LeftPressed())
-            {
-                Item?.DoUse(this);
             }
             GeimuGame game = (GeimuGame)Room.Engine.Game;
             Rectangle hitbox = GetHitbox();

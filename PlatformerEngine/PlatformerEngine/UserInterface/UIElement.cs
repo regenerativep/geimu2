@@ -79,7 +79,7 @@ namespace PlatformerEngine.UserInterface
         /// </summary>
         /// <param name="mouseState">the mouse state</param>
         /// <param name="amount">the amount scrolled</param>
-        public virtual void Scroll(MouseState mouseState, float amount) { }
+        public virtual void Scroll(MouseState mouseState, float amount, Vector2 offset) { }
         /// <summary>
         /// remove this ui element's reference from the ui manager
         /// </summary>

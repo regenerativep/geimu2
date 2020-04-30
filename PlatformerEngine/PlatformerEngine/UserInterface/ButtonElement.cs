@@ -24,6 +24,18 @@ namespace PlatformerEngine.UserInterface
         /// </summary>
         public Vector2 TextPadding;
         /// <summary>
+        /// amount of opacity for the current fade
+        /// </summary>
+        public float FadeAlpha;
+        /// <summary>
+        /// amount of opacity to reset to when clicked
+        /// </summary>
+        public static float OnClickFadeReset = 0.5f;
+        /// <summary>
+        /// amount of opacity to reduce when recently clicked
+        /// </summary>
+        public static float FadeDecay = 0.04f;
+        /// <summary>
         /// called when this is clicked on
         /// </summary>
         public Action Click;
@@ -40,18 +52,34 @@ namespace PlatformerEngine.UserInterface
         {
             TextPadding = new Vector2(2, 2);
             TextElement = new TextElement(UIManager, TextPadding, Size - TextPadding, Layer + 0.01f, name + "_text", Color.Black, text);
+            FadeAlpha = 0;
             Click = null;
         }
         public override void Draw(SpriteBatch spriteBatch, Vector2 offset)
         {
-            spriteBatch.DrawOutlinedRectangle(Position + offset, Position + Size + offset, Color.White, Color.Black, Layer);
+            int fadeValue = 255 - (int)(FadeAlpha * 255);
+            spriteBatch.DrawOutlinedRectangle(Position + offset, Position + Size + offset, new Color(fadeValue, fadeValue, fadeValue, 255), Color.Black, Layer);
             TextElement.Draw(spriteBatch, Position + offset);
             base.Draw(spriteBatch, offset);
         }
         public override void MousePressed(MouseState mouseState, Vector2 offset)
         {
-            Click?.Invoke();
-            base.MousePressed(mouseState, offset);
+            if (mouseState.LeftPressed())
+            {
+                Click?.Invoke();
+                FadeAlpha = OnClickFadeReset;
+            }
+        }
+        public override void Update()
+        {
+            if(FadeAlpha > 0)
+            {
+                FadeAlpha -= FadeDecay;
+            }
+            if(FadeAlpha < 0)
+            {
+                FadeAlpha = 0;
+            }
         }
         public override void Destroy(bool hardDestroy = false)
         {

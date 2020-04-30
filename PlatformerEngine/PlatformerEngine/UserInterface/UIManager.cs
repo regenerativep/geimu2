@@ -264,7 +264,7 @@ namespace PlatformerEngine.UserInterface
             float scrollValue = Math.Sign(lastScrollAmount - scrollAmount) * ScrollMultiplier;
             if (scrollValue != 0)
             {
-                TopUINode.Scroll(MouseState, scrollValue);
+                TopUINode.Scroll(MouseState, scrollValue, new Vector2(0, 0));
             }
             //text input
             Keys[] pressedKeys = KeyboardState.GetPressedKeys();

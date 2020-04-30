@@ -69,7 +69,8 @@ namespace PlatformerEngine.UserInterface
         }
         public override void MouseReleased(MouseState mouseState, Vector2 offset)
         {
-            Vector2 mousePos = new Vector2(mouseState.X, mouseState.Y) - Position - SoftOffset;
+            Vector2 newOffset = Position + SoftOffset + offset;
+            Vector2 mousePos = new Vector2(mouseState.X, mouseState.Y) - newOffset;
             for (int i = Elements.Count - 1; i >= 0; i--)
             {
                 UIElement elem = Elements[i];
@@ -81,18 +82,20 @@ namespace PlatformerEngine.UserInterface
             }
             base.MouseReleased(mouseState, offset);
         }
-        public override void Scroll(MouseState mouseState, float amount)
+        public override void Scroll(MouseState mouseState, float amount, Vector2 offset)
         {
-            Vector2 mousePos = new Vector2(mouseState.X, mouseState.Y) - Position;
+            Vector2 newOffset = Position + SoftOffset + offset;
+            Vector2 mousePos = new Vector2(mouseState.X, mouseState.Y) - newOffset;
             for (int i = Elements.Count - 1; i >= 0; i--)
             {
                 UIElement elem = Elements[i];
                 if (PlatformerMath.PointInRectangle(new Rectangle(elem.Position.ToPoint(), elem.Size.ToPoint()), mousePos))
                 {
-                    elem.Scroll(mouseState, amount);
+                    elem.Scroll(mouseState, amount, newOffset);
+                    break;
                 }
             }
-            base.Scroll(mouseState, amount);
+            base.Scroll(mouseState, amount, offset);
         }
         /// <summary>
         /// destroys all children from this group

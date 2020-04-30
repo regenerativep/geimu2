@@ -1,4 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input;
+using PlatformerEngine;
 using PlatformerEngine.UserInterface;
 using System;
 using System.Collections.Generic;

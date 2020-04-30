@@ -16,7 +16,7 @@ namespace PlatformerEngine
         /// <summary>
         /// collision precision
         /// </summary>
-        public static float CollisionPrecision = 1;
+        public static float CollisionPrecision = 0.5f;
         /// <summary>
         /// the position of the object
         /// </summary>

@@ -53,9 +53,10 @@ namespace PlatformerEditor
             CurrentWorldLayer = null;
             WorldLayers = new Dictionary<int, WorldLayer>();
             UIManager = new UIManager(this, Assets);
-            //TabbedElement mainTabs = new TabbedElement(UIManager, new Vector2(0, 0), new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height), 0.4f, "tabs_main", 24);
-            //mainTabs.AddTab("level", new LevelTab(UIManager, new Vector2(0, 0), new Vector2(mainTabs.CurrentTabContainer.Size.X, mainTabs.CurrentTabContainer.Size.Y), 0.4f, "tab_level"));
-            UIManager.TopUINode.Elements.Add(new LevelTab(UIManager, new Vector2(0, 0), new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height), 0.4f, "tab_level"));
+            TabbedElement mainTabs = new TabbedElement(UIManager, new Vector2(0, 0), new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height), 0.4f, "tabs_main", 24);
+            mainTabs.AddTab("level", new LevelTab(UIManager, new Vector2(0, 0), new Vector2(mainTabs.CurrentTabContainer.Size.X, mainTabs.CurrentTabContainer.Size.Y), 0.4f, "tab_level"));
+            UIManager.TopUINode.Elements.Add(mainTabs);
+            //UIManager.TopUINode.Elements.Add(new LevelTab(UIManager, new Vector2(0, 0), new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height), 0.4f, "tab_level"));
 
             LoadWorldItemTypes("types.json");
 

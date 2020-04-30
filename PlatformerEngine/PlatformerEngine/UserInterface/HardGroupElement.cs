@@ -44,6 +44,10 @@ namespace PlatformerEngine.UserInterface
             spriteBatch.End();
             spriteBatch.GraphicsDevice.SetRenderTarget(null);
             spriteBatch.Begin(UIManager.SortMode);
+            if (Name.Equals("tab_level"))
+            {
+                ConsoleManager.WriteLine(Position + offset);
+            }
             spriteBatch.Draw(Graphics, Position + offset, Color.White);
         }
     }

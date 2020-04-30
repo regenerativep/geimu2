@@ -66,7 +66,10 @@ namespace PlatformerEngine.UserInterface
         public void SetTab(string name)
         {
             UIElement content = GetTabContent(name);
-            CurrentTabContainer.Elements.Clear();
+            if (CurrentTabContainer.Elements.Count > 0)
+            {
+                CurrentTabContainer.Elements.RemoveAt(0);
+            }
             if (content != null)
             {
                 CurrentTabContainer.Elements.Add(content);
