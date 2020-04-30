@@ -25,10 +25,10 @@ namespace PlatformerTestGame.GameObjects
         }
         public override void Update()
         {
-            GameObject coll = Room.FindCollision(PlatformerMath.AddVectorToRect(GetHitbox(), Position), "reimu");
+            GameObject coll = Room.FindCollision(PlatformerMath.AddVectorToRect(GetHitbox(), Position), "obj_player");
             if (coll != null)
             {
-                if (Room.FindObject("fairy") == null && Room.FindObject("clownpiece") == null)
+                if (Room.FindObject("obj_fairy") == null && Room.FindObject("obj_boss") == null)
                 {
                     if (!HasPlayedSound)
                     {
@@ -37,9 +37,14 @@ namespace PlatformerTestGame.GameObjects
                     }
                     Room nextRoom = new Room(Room.Engine);
                     //find the room number
-                    int num = Convert.ToInt32(Room.CurrentFileName.Substring(12, Room.CurrentFileName.IndexOf('.')));
-                    nextRoom.Load("levels/level" + (num + 1) + ".json");
-                    Room.Engine.ChangeRoom(nextRoom);
+                    if (Room.CurrentFileName.Substring(0, 12).Equals("Levels/level"))
+                    {
+                        int endInd = Room.CurrentFileName.IndexOf('.');
+                        string numStr = Room.CurrentFileName.Substring(12, endInd - 12);
+                        int num = Convert.ToInt32(numStr);
+                        nextRoom.Load("Levels/level" + (num + 1) + ".json");
+                        Room.Engine.ChangeRoom(nextRoom);
+                    }
                 }
             }
             base.Update();

@@ -93,7 +93,7 @@
     {
       "name": "snd_reimuhurt",
       "type": "sound",
-      "path": "sounds/reimudamaged"
+      "path": "sounds/ReimuDamaged"
     },
     {
       "name": "snd_maintheme",
@@ -185,7 +185,7 @@
     {
       "name": "spr_stoneedgeright",
       "type": "texture",
-      "path": "sprites/stonesideleft"
+      "path": "sprites/stonesideright"
     },
     {
       "name": "spr_stoneedgetop",

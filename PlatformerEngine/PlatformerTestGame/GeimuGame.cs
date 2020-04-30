@@ -56,7 +56,7 @@ namespace PlatformerTestGame
             PEngine.NameToType["tle_dirt"] = typeof(DirtTile);
             PEngine.NameToType["tle_stone"] = typeof(StoneTile);
 
-            Engine.ChangeRoom((new Room(Engine)).Load("levels/test1.json"));
+            Engine.ChangeRoom((new Room(Engine)).Load("Levels/level2.json"));
 
             base.Initialize();
         }

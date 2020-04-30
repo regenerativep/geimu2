@@ -21,7 +21,11 @@ namespace PlatformerTestGame.GameObjects
         }
         public override void Update()
         {
-            if (Target == null) return;
+            if (Target == null)
+            {
+                Target = Room.FindObject("obj_player");
+                return;
+            }
             Vector2 pos = Position;
             pos.X = ((TargetPreference * (Target.Position.X)) + (SelfPreference * pos.X)) / (TargetPreference + SelfPreference);
             pos.Y = ((TargetPreference * (Target.Position.Y)) + (SelfPreference * pos.Y)) / (TargetPreference + SelfPreference);

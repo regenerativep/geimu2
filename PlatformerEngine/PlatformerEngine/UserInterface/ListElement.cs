@@ -101,6 +101,7 @@ namespace PlatformerEngine.UserInterface
         }
         public override void Scroll(MouseState mouseState, float amount, Vector2 offset)
         {
+            ConsoleManager.WriteLine("hello");
             SoftOffset.Y += amount;
             if (SoftOffset.Y < -MaxScroll) SoftOffset.Y = -MaxScroll;
             if (SoftOffset.Y > 0) SoftOffset.Y = 0;

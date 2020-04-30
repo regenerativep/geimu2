@@ -5,6 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
+using System.Runtime;
+using Microsoft.Xna.Framework.Input;
+using PlatformerEngine;
 
 namespace PlatformerEditor
 {
@@ -23,6 +26,11 @@ namespace PlatformerEditor
             worldItemTabs.AddTab("tiles", actualGame.TileListElement, 64);
             Elements.Add(worldItemTabs);
             Elements.Add(new SettingsElement(UIManager, new Vector2(actualGame.GraphicsDevice.Viewport.Width - 128, 0), new Vector2(128, 692), 0.4f, "box_settings"));
+        }
+        public override void Scroll(MouseState mouseState, float amount)
+        {
+            ConsoleManager.WriteLine("hello3");
+            base.Scroll(mouseState, amount);
         }
     }
 }

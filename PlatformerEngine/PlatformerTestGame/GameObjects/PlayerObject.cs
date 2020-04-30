@@ -19,7 +19,7 @@ namespace PlatformerTestGame.GameObjects
         public static Vector2 MaxVelocity = new Vector2(8, 16);
         public static float GroundFriction = 1f;
         public static int MaxJumpsLeft = 1;
-        public static int MaxJumpCooldown = 15;
+        public static int MaxJumpCooldown = 40;
         public static float MinVerticalVelocityImage = 2f;
 
         public Item Item;
@@ -88,17 +88,9 @@ namespace PlatformerTestGame.GameObjects
         }
         public void Kill()
         {
-            BossObject bossObject = (BossObject)Room.FindObject("obj_boss");
-            if (Room.GameObjectList.Contains(bossObject))
-            {
-                Room.Engine.LoadRoom("Levels/lose.json", new FadeTransition());
-            }
+            //Room.Engine.LoadRoom("Levels/lose.json", new FadeTransition());
             Room.LightList.Remove(Light);
             Room.GameObjectList.Remove(this);
-            if(bossObject != null && Room.GameObjectList.Contains(bossObject))
-            {
-                bossObject.Kill();
-            }
         }
         public void Damage(float amount)
         {
@@ -149,8 +141,8 @@ namespace PlatformerTestGame.GameObjects
             Sprite.Size = new Vector2(48, 64);
             Sprite.Offset = -(new Vector2(Sprite.Size.X / 2, Sprite.Size.Y / 2 + (Sprite.Size.Y - Sprite.Size.X) / 2));
             Sprite.Speed = 0.2f;
-            Room.GameObjectList.Add(new ItemObject(Room, new Vector2(192, 640), new SwordItem(Room)));
-            Room.GameObjectList.Add(new ItemObject(Room, new Vector2(768, 640), new MagicItem(Room)));
+            //Room.GameObjectList.Add(new ItemObject(Room, new Vector2(192, 640), new SwordItem(Room)));
+            //Room.GameObjectList.Add(new ItemObject(Room, new Vector2(768, 640), new MagicItem(Room)));
         }
         public void ResetJumps()
         {
@@ -160,7 +152,11 @@ namespace PlatformerTestGame.GameObjects
         {
             MouseState = Mouse.GetState();
             float moveSpeed = AirSpeed;
-            if(Room.FindCollision(new Rectangle((Position + Sprite.Offset + new Vector2(0, 1)).ToPoint(), Sprite.Size.ToPoint()), "obj_block") != null)
+            Rectangle groundCollisionHitbox = new Rectangle(
+                (Position + Sprite.Offset + new Vector2(0, Sprite.Size.Y / 2)).ToPoint(),
+                new Vector2(Sprite.Size.X, Sprite.Size.Y / 2 + 1).ToPoint()
+            );
+            if(Room.FindCollision(groundCollisionHitbox, "obj_block") != null)
             {
                 Grounded = true;
                 moveSpeed = GroundSpeed;
@@ -237,7 +233,7 @@ namespace PlatformerTestGame.GameObjects
                 Sprite.Size = new Vector2(64, 96);
                 Sprite.Offset = new Vector2(0, -32);
             }
-            else if(Math.Abs(Velocity.X) >= MinRunAnimationSpeed)
+            else if(Grounded && Math.Abs(Velocity.X) >= MinRunAnimationSpeed)
             {
                 Sprite.Change(RunImage);
                 Sprite.Size = new Vector2(64, 64);
@@ -249,6 +245,7 @@ namespace PlatformerTestGame.GameObjects
                 Sprite.Size = new Vector2(64, 64);
                 Sprite.Offset = new Vector2(0, 0);
             }
+<<<<<<< HEAD
             GeimuGame game = (GeimuGame)Room.Engine.Game;
             Rectangle hitbox = GetHitbox();
             hitbox.Location += Position.ToPoint();
@@ -269,6 +266,8 @@ namespace PlatformerTestGame.GameObjects
                     upgradeObject.Upgrade();
                 }
             }
+=======
+>>>>>>> fca63326b295f70cc0fd5c9426050b5bb54ef11a
             if(JumpCooldown > 0)
             {
                 JumpCooldown--;
@@ -292,7 +291,7 @@ namespace PlatformerTestGame.GameObjects
         }
         public override void Draw(SpriteBatch spriteBatch, Vector2 viewPosition)
         {
-            Vector2 drawSize = new Vector2(144, 48);
+            /*Vector2 drawSize = new Vector2(144, 48);
             Vector2 drawFrom = Position - (drawSize / 2) - new Vector2(0, 64) - viewPosition;
             spriteBatch.DrawOutlinedRectangle(drawFrom, drawFrom + drawSize, Color.White, Color.Black, 0.99f);
             spriteBatch.DrawString(Font, "health: " + Health + " / " + MaxHealth, drawFrom + new Vector2(4, 4), Color.Black, 0f, new Vector2(0, 0), 1f, SpriteEffects.None, 1f);
@@ -305,7 +304,7 @@ namespace PlatformerTestGame.GameObjects
             {
                 damageText += "no item";
             }
-            spriteBatch.DrawString(Font, damageText, drawFrom + new Vector2(4, 24), Color.Black, 0f, new Vector2(0, 0), 1f, SpriteEffects.None, 1f);
+            spriteBatch.DrawString(Font, damageText, drawFrom + new Vector2(4, 24), Color.Black, 0f, new Vector2(0, 0), 1f, SpriteEffects.None, 1f);*/
             base.Draw(spriteBatch, viewPosition);
         }
     }
